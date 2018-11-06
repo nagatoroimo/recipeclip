@@ -1,0 +1,38 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+
+    <div id="page_body">
+        <div id="main_contents_login">
+            <div id="login_form">
+                <p id="instruction">メールアドレスとパスワードを入力してください。</p>
+                <div id="error_message">
+                    <% if @error_message %>
+                        <%= @error_message %>
+                    <% end %>
+                </div>
+
+                <%= form_tag("/login") do %>
+                    <div id="input_email">
+                        <input name="email" value="<%= @email %>" placeholder="メールアドレス">
+                    </div>
+                    <div id="input_password">
+                        <input type="password" name="password" value="<%= @password %>" placeholder="パスワード">
+                    </div>
+                    <p id="password_forget">
+                    <%= link_to(password_resets_new_path) do %>
+                        <i class="fas fa-question-circle">パスワードを忘れましたか？</i>
+                    <% end %>
+                    </p>
+                    <div id="input_submit">
+                        <input type="submit" value="ログイン">
+                    </div>
+                <% end %>
+                <p id="signup">
+                    <%= link_to (signup_path(@user)) do %>
+                        <i class="fas fa-user">新規登録はこちら</i>
+                    <% end %>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

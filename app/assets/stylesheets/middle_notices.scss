@@ -1,0 +1,99 @@
+@media screen and (max-width:960px) and (min-width:481px) {
+    .notices #wrapper {
+        background: #FFFFFF;
+        overflow: hidden;
+    }
+    .notices #notice_content {
+    }
+    .notices #notice_content i.fas.fa-exclamation-circle {
+        float: left;
+    }
+    .notices #notice_content p.title {
+        padding: 0;
+        font-weight: bold;
+        margin: 20px;
+        overflow: hidden;
+    }
+    .notices #notice_content i.fas.fa-exclamation-circle {
+        line-height: 1.5;
+    }
+    .notices #notice_content .section {
+        margin-top: 20px;
+    }
+    .notices #notice_content .section .notice_contents {
+        margin: 20px;
+    }
+    .notices #notice_content .section p.sub_title {
+        float: left;
+        width: 100%;
+        margin-bottom: 10px;
+        font-weight: bold;
+        background: #F7EEE7;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    .notices #notice_content .section i.fas.fa-check-square {
+        margin-right: 5px;
+    }
+    .notices #notice_content p#registration_btn {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .notices #notice_content p#registration_btn a {
+        background: #CC6600;
+        color: #FFFFFF;
+        display: block;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+    }
+    .notices #notice_content p#agreement {
+        text-align: center;
+    }
+
+    /* side_contents */
+
+    .notices #side_contents {
+        overflow: hidden;
+        margin: 20px;
+    }
+    .notices #side_contents ul {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .notices #side_contents ul li {
+        width: 100%;
+        float: left;
+        display: inline;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    .notices #side_contents ul li a {
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: #630;
+        text-align: center;
+        color: #FFFFFF;
+        border-radius: 5px;        /* CSS3草案 */  
+        -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 5px;   /* Firefox用 */ 
+    }
+    .notices #side_contents ul li#here a {
+        display: block;
+        background: #999999;
+        text-align: center;
+        color: #FFFFFF;
+        border-radius: 5px;        /* CSS3草案 */  
+        -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 5px;   /* Firefox用 */ 
+    }
+}

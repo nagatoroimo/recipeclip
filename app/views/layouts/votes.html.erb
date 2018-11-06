@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>レシピクリップ - RecipeClip|レシピブログランキング</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'small_votes', media: 'only screen and (max-width:480px)' %>
+    <%= stylesheet_link_tag 'small_base', media: 'only screen and (max-width:480px)' %>
+
+    <%= stylesheet_link_tag 'middle_votes', media: 'only screen and (max-width:1023px) and (min-width: 481px)' %>
+    <%= stylesheet_link_tag 'middle_base', media: 'only screen and (max-width:1023px) and (min-width: 481px)' %>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.min.css">
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    $(function(){
+        $(".menu").click(function(){
+            $(".menu1").toggleClass("menuclick1")
+        });
+        $(".menu").click(function(){
+            $(".menu2").toggleClass("menuclick2")
+        });
+        $(".menu").click(function(){
+            $(".menu3").toggleClass("menuclick3")
+        }); 
+    });
+    </script>
+    <script>
+    jQuery(function($){
+      $('.menu').click(function(){
+        if ($('#sub_nav').css('display') == 'none') {
+          $('#sub_nav').slideDown('fast');
+        } else {
+          $('#sub_nav').slideUp('fast');
+        }
+      });
+    });
+    </script>
+  </head>
+
+  <body class="<%= "#{controller.controller_name}" %>">
+  <%= render "layouts/header" %>
+
+  <%= yield %>
+
+  <%= render "layouts/footer" %>
+  </body>
+</html>

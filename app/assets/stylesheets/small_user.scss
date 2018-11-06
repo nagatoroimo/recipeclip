@@ -1,0 +1,421 @@
+@media screen and (max-width:480px) {
+
+
+    /* notified_list */
+    .users #notified i.fas.fa-heart {
+        color: #FF7575;
+    }
+    .users #notified i.fas.fa-paperclip {
+        color: #630;
+    }
+    
+    /* visual */
+    .users #visual p img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    /* profile */
+    .users #profile_content {}
+    .users #profile {
+        width: 100%;
+    }
+    .users p#user_img {
+        width: 80px;
+        height: 80px;
+        float: left;
+        margin-top: -5px;
+        margin-left: 20px;
+        z-index: 9999999;
+        position: relative;
+        margin-right: 10px;
+    }
+    .users p#user_img img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #FFFFFF;
+        float: left;
+    }
+    
+    .users #contributor {
+        background: #FFFFFF;
+        padding: 20px;
+    }
+    .users p#self_introduction {
+        margin-left: 90px;
+    }
+
+    /* count */
+    .users #count {
+        width: auto;
+        overflow: hidden;
+        background: #630;
+    }
+    .users #count ul{
+        border-left: 1px dotted #CCCCCC;
+        width: 90%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .users #count ul li {
+        float: left;
+        display: inline;
+        width: 31%;
+        text-align: center;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        border-right: 1px dotted #CCCCCC;
+    }
+    .users #count ul li a {
+        display: block;
+        color: #FFFFFF;
+    }
+    .users span.count {
+        font-size: 16px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+
+    /* profile編集 */
+    .users #main_contents_edit input {
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        border: 1px solid #D3C3B4;
+        margin: 0 auto;
+        padding: 5px;
+    }
+    .users #main_contents_edit {
+        margin-top: 20px;
+    }
+    .users #main_contents_edit p.title {
+        background: none;
+        text-align: center;
+        font-weight: bold;
+    }
+    .users #main_contents_edit table {
+        width: 100%;
+        background: #FFFFFF;
+        border-bottom: 1px solid #CCCCCC;
+        margin-top: 20px;
+        border-collapse: collapse;
+        border-top: 1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+    }
+    .users #main_contents_edit table th {
+        width: 40%;
+        padding: 10px;
+        border-bottom: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+    }
+    .users #main_contents_edit table td {
+        width: 60%;
+        padding: 10px;
+        border-bottom: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+    }
+    .users #main_contents_edit .section {
+        margin: 20px;
+    }
+    .users #main_contents_edit .section ul#sex_check li {
+        float: left;
+        display: inline;
+        margin-right: 5px;
+    }
+    .users #main_contents_edit label {
+        color: white;  
+        background-color: #630;
+        padding: 10px;
+        cursor: pointer;
+        display: block;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        text-align: center;
+    }
+    .users #main_contents_edit label input {
+        display: none;
+    }
+    .users #main_contents_edit #input_submit {
+        width: 200px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .users #main_contents_edit #input_submit input {
+        width: 200px !important;
+        margin: 0 auto !important;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+    }
+    .users #main_contents_edit textarea {
+        padding: 10px;
+        border: 1px solid #D3C3B4;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        width: 100%;
+        box-sizing: border-box;
+        height: 100px;
+    }
+
+    /* 投稿レシピ */
+
+    .users #posted_recipes {
+        width: 100%;
+        overflow: hidden;
+    }
+    .users #posted_recipes p.title {
+        color: #630;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .users #main_contents_show #posted_recipes ul {
+        overflow: hidden;
+        margin: 20px;
+    }
+    .users #main_contents_show #posted_recipes ul li#posts_2,
+    .users #main_contents_show #posted_recipes ul li#posts_4,
+    .users #main_contents_show #posted_recipes ul li#posts_6 {
+        margin-right: 0;
+    }
+    .users #main_contents_show #posted_recipes ul li.recipe_list{
+        width: 49%;
+        overflow: hidden;
+        float: left;
+        display: inline;
+        margin-right: 2%;
+        margin-bottom: 2%;
+    }
+    .users #main_contents_show #posted_recipes p.recipe_img {
+        width: 100%;
+        height: 150px;
+    }
+    .users #main_contents_show #posted_recipes .recipe_img img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    .users #main_contents_show .recipe_details {
+        background: #FFFFFF;
+        padding: 10px;
+    }
+    .users #main_contents_show .recipe_details p {
+        line-height: 1.5;
+    }
+    .users #main_contents_show .recipe_details p.user_img{
+        clear: both;
+    }
+    .users #main_contents_show .recipe_details p.user_name {
+        float: none;
+    }
+
+
+    /* お気に入りレシピ一覧ページ ================================ */
+
+    .users #main_contents_likes {}
+    .users #main_contents_likes #liked_recipes {
+        overflow: hidden;
+    }
+    .users #main_contents_likes #liked_recipes p.title {
+        background: #F7EEE7;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #630;
+    }
+    .users #liked_recipes ul {
+        margin: 20px;
+        overflow: hidden;
+    }
+    .users #liked_recipes ul li {
+        width: 49%;
+        overflow: hidden;
+        float: left;
+        display: inline;
+        margin-right: 2%;
+        margin-bottom: 2%;
+    }
+    .users #liked_recipes ul li .recipe_img {
+        width: 100%;
+        height: 150px;
+        background: #000000;
+    }
+    .users #liked_recipes ul li .recipe_img img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    .users #liked_recipes ul li .like_recipe_detail {
+        padding-top: 5px;
+        background: #FFFFFF;
+    }
+    .users #liked_recipes ul li#like_2,
+    .users #liked_recipes ul li#like_4,
+    .users #liked_recipes ul li#like_6 {
+        margin-right: 0;
+    }
+    p.recipe_title {
+        font-weight: bold;
+    }
+    p.recipe_description {
+        color: #333333;
+    }
+
+
+    /* フォローユーザー一覧 ================================ */
+
+    .users #main_contents_follows {}
+    .users #main_contents_follows #liked_recipes p.title {
+        background:#F7EEE7;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #630;
+    }
+    .users #follow_user_list {
+        overflow: hidden;
+    }
+    .users #follow_user_list ul {
+        margin: 20px;
+    }
+    .users #follow_user_list ul li {
+        width: 100%;
+        overflow: hidden;
+        background: #F7EEE7;
+        padding: 20px;
+        margin-bottom: 10px;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+    .users .follow_user_name {
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    .users .follow_user_img {
+        width: 80px;
+        height: 80px;
+        float: left;
+        margin-right: 10px;
+    }
+    .users .follow_user_img img{
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+        object-fit: cover;
+        float: left;
+    }
+
+    /* フォロワーユーザー一覧 ================================ */
+
+    .users #main_contents_followers {}
+    .users #follower_user_list {
+        overflow: hidden;
+    }
+    .users #follower_user_list p.title {
+        background:#F7EEE7;
+        text-align: center;
+        font-weight: bold;
+        color: #630;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .users #follower_user_list ul {
+        margin: 20px;
+    }
+    .users #follower_user_list ul li {
+        height: 80px;
+        background: #F7EEE7;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    .users .follower_user_name {
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    .users .follower_user_img {
+        width: 80px;
+        height: 80px;
+        float: left;
+        margin-right: 10px;
+    }
+    .users .follower_user_img img{
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+        object-fit: cover;
+        float: left;
+    }
+
+    /* ログイン・新規会員登録画面 ================================ */
+
+    /* 共通 */
+
+    .users #login_form input {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        border: 1px solid #D3C3B4;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    .users p#password_forget {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .users p#signup {
+        text-align: center;
+    }
+
+    .users #main_contents_login {
+        overflow: hidden;
+        padding: 0 !important;
+        background: none !important;
+    }
+    .users #login_form {
+        margin: 20px;
+        overflow: hidden;
+        background:#ecdfd6;
+        border: 1px solid #D3C3B4;
+        padding: 30px;
+    }
+    .users #login_form #instruction {
+        text-align: center;
+        margin-bottom: 10px;    
+    }
+    .users input[type="submit"] {
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-radius: 5px;        /* CSS3草案 */  
+        -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 5px;   /* Firefox用 */ 
+        text-align: center;
+        float: none;
+        background: #630;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+    .users p#terms {
+        text-align: center;
+    }
+
+
+}

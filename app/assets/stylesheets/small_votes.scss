@@ -1,0 +1,63 @@
+@media screen and (max-width:480px) {
+    .votes #main_contents_ranking {}
+    .votes #main_contents_ranking p.title {
+        text-align: center;
+        font-weight: bold;
+        color: #630;
+        background: #F7EEE7;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .votes #main_contents_ranking table {
+        margin: 20px;
+    }
+    .votes #main_contents_ranking table {
+        border-top: 1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+        border-collapse: collapse;
+    }
+    .votes #main_contents_ranking table th {
+        border-bottom: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        padding: 10px;
+    }
+    .votes #main_contents_ranking table td {
+        border-bottom: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        padding: 10px;
+    } 
+    .votes #main_contents_ranking .rank p#rank_1 {
+        color: #B8860B;
+    }
+    .votes #main_contents_ranking .rank p#rank_2 {
+        color: #696969;
+    }
+    .votes #main_contents_ranking table td.user_thumbnail {
+        width: 30px;
+        height: 30px;
+    }
+    .votes #main_contents_ranking table td.user_thumbnail img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+    .votes #main_contents_ranking table td.blog_details .article_content {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px dotted #CCCCCC;
+    }
+    .votes #main_contents_ranking table td.blog_details .article_content ul.new_article {
+        padding-left: 15px;
+        font-size: 11px;
+    }
+    .votes #main_contents_ranking table td.blog_details .article_content ul.new_article li {
+        list-style: disc;
+    }
+    .votes #main_contents_ranking table td.blog_details .article_content ul.new_article li a {}
+    .votes #main_contents_ranking table td.in_point {
+        text-align: center;
+    }
+    .votes #main_contents_ranking table td.out_point {
+        text-align: center;
+    }
+}

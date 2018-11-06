@@ -1,0 +1,10 @@
+C:/Ruby22-x64/bin/ruby.exe -r ./siteconf20180924-23284-byx9ht.rb extconf.rb
+
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
+make: Nothing to be done for `install'.

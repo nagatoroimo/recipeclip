@@ -1,0 +1,32 @@
+<div id="wrapper">
+    <div id="main_contents_reset">
+        <div id="reset_form">
+            <div id="message">
+                <% if @message %>
+                    <%= @message %>
+                <% end %>
+            </div>
+            <div id="error_message">
+                <% if @error_message %>
+                    <%= @error_message %>
+                <% end %>
+            </div>
+
+            <%= form_tag(password_resets_path) do %>
+                <p id="instruction">登録しているメールアドレスを入力してください。</p>
+                <div id="input_email">
+                    <input name="email" value="" placeholder="メールアドレス">
+                </div>
+                <div id="password_reset_input_submit">
+                    <input type="submit" value="パスワードを再設定する">
+                </div>
+                <div id="attention">
+                    <ul>
+                        <li>フリーメールアドレスをご利用の場合は、迷惑メールフォルダやゴミ箱に振り分けられてしまう場合があります。念のためご確認ください。</li>
+                        <li>携帯電話メールアドレスを使用されると、ドメイン設定によりメールが受信できない場合がございます。「recipeclip.com」を受信設定してください。</li>
+                    </ul>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

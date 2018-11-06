@@ -1,0 +1,44 @@
+<div id="wrapper">
+    <div id="page_body">
+        <div id="main_contents_edit">
+            <%= form_tag("/blog/#{@user.id}/#{@blog.id}/update") do %>
+                <div id="input_blog_title">
+                    <p class="title">ブログタイトル</p>
+                    <div class="input_area">
+                        <input name="blog_title" value="<%= @blog.blog_title %>" placeholder="ブログタイトル">
+                    </div>
+                    <%= blog_error_message(:blog_title) %>
+                </div>
+                <div id="input_blog_url">
+                    <p class="title">ブログURL</p>
+                    <div class="input_area">
+                        <input name="blog_url" value="<%= @blog.blog_url %>" placeholder="ブログURL">
+                    </div>
+                    <%= blog_error_message(:blog_url) %>
+                </div>
+                <div id="input_rss_url">
+                    <p class="title">RSS URL</p>
+                    <div class="input_area">
+                        <input name="rss_url" value="<%= @blog.rss_url %>" placeholder="RSS URL">
+                    </div>
+                    <%= blog_error_message(:rss_url) %>
+                </div>
+                <div id="input_blog_description">
+                    <p class="title">ブログの紹介文</p>
+                    <div class="input_area">
+                        <textarea name="blog_description" placeholder="ブログ説明文"><%= @blog.blog_description %></textarea>
+                    </div>
+                    <%= blog_error_message(:blog_description) %>
+                </div>
+                <div id="input_submit">
+                    <input type="submit" value="更新する">
+                </div>
+            <% end %>
+        </div>
+
+        <div id="side_contents_edit">
+            <div id="sponser">
+            </div>
+        </div>
+    </div>
+</div>

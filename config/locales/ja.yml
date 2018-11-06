@@ -1,0 +1,32 @@
+ja:
+  activerecord:
+    models:
+      post: 投稿
+      temp: 一時保存
+    attributes:
+      post:
+        recipe_image_name: 料理画像
+        recipe_title: レシピ名
+        recipe_description: レシピの紹介文
+        number_persons: 何人分か
+      relationship_category:
+        category: カテゴリー名
+      relationship_cookin_time:
+        cooktime: 調理時間
+      material:
+        name: 材料
+        quantity: 分量
+      recipe_step:
+        step: 作り方
+      temp:
+        recipe_image_name: 料理画像
+        recipe_title: レシピ名
+        recipe_description: レシピの紹介文
+        cooking_time: 調理時間
+        number_persons: 何人分か
+        category: カテゴリー
+      temporarily_material:
+        temp_name: 材料
+        temp_quantity: 分量
+      temp_recipe_step:
+        step: 作り方

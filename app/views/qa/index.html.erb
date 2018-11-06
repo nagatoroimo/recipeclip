@@ -1,0 +1,28 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+    
+    <div id="page_body">
+        <div id="main_contents_qa">
+            <div class="section">
+                <div class="question">
+                <p class="question_title"><i class="fas fa-question-circle"></i>バナーの設置方法</p>
+                </div>    
+                <div class="answer">
+                    <p>各ブログサービスごとに、バナー設置方法の解説ページをご用意しました。<br>設置方法がご不明な方は参考にしてみてください。</p>
+                    <ul id="blog_service">
+                        <li><%= link_to "・アメーバブログへの掲載方法", "/qa/ameblo" %></li>
+                        <li><%= link_to "・FC2ブログへの掲載方法", "/qa/fc2" %></li>
+                        <li><%= link_to "・Yahoo!ブログへの掲載方法", "/qa/yahoo" %></li>
+                        <li><a href="#">・ライブドアブログへの掲載方法</a></li>
+                    </ul>
+                    <p>その他のブログサービスについても設置方法を順次公開していきます。</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="side_contents">
+            <div id="sponsor">
+            </div>
+        </div>
+    </div>
+</div>

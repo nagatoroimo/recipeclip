@@ -1,0 +1,488 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+  
+
+/*　コンテンツ ===============================*/
+
+.home #wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 30px;
+}
+.home #terms_main_contents {
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.home #about_main_contents {
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.home .section {
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.home p.title {
+    color: #630;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.home p.title i.fas.fa-heart {
+    line-height: 1.7;
+}
+.home i.fas.fa-heart {
+    font-size: 16px;
+}
+.home i.fas.fa-star{
+    color: #FEC254;
+    margin-right: 5px;
+    font-size: 16px;
+}
+.home i.fas.fa-flag {
+    color: #46800D;
+    margin-right: 5px;
+    font-size: 16px;
+}
+.home i.fas.fa-th-list {
+    color: #333333;
+    margin-right: 5px;
+    font-size: 16px;
+}
+.home i.fas.fa-tag {
+    color: #666666;
+    margin-right: 5px;
+}
+.home i.fas.fa-crown {
+    margin-right: 5px;
+}
+.home #crown_num_1 {
+    color: #B8860B;
+}
+.home #crown_num_2 {
+    color: #696969;
+}
+
+.home p.sub_title {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.home p.title a {
+    font-size: 14px;
+    color: #630;
+}
+
+
+.home #about_contents ul li {
+    width: 260px;
+    overflow: hidden;
+    padding: 20px;
+    float: left;
+    display: inline;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background: #FFFFFF;
+}
+.home #about_contents ul li.here {
+    margin-right: 0px;
+}
+.home #about_contents ul li .sub_title {
+    text-align: center;
+    border-bottom: 1px solid #F7EEE7;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+.home #about_contents ul li p.about_img {
+    background: #000000;
+    width: 260px;
+    height: 160px;
+    margin-bottom: 20px;
+}
+.home #about_contents ul li p.about_img img {
+    width: 260px;
+    height: 160px;
+    object-fit: cover;
+}
+.home #catch {
+    width: 1000px;
+    height: 160px;
+    margin: 0 auto;
+    background: image-url("top_visual_bg.gif") no-repeat;
+    background-position: 10px;
+}
+.home #catch h1 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.home #catch h1 img {
+    width: 240px;
+}
+.home p#description {
+    text-align: center;
+}
+
+.home #topix {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.home #topix ul {
+    width: 1000px;
+    overflow: hidden;
+}
+.home #topix ul li {
+    float: left;
+    display: inline;
+    width: 320px;
+    overflow: hidden;
+    margin-right: 20px;
+    position: relative;
+}
+.home #topix ul li#pr_3 {
+    margin-right: 0px;
+}
+.home .recipe_img {
+    width: 320px;
+    height: 320px;
+}
+.home .recipe_img img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+}
+.home .user_img {
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+}
+.home .user_img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: 2px solid #F7EEE7;
+    object-fit: cover;
+}
+.home #topix .recipe_details {
+    padding: 20px;
+    background: #FFFFFF;
+}
+.home p.recipe_title a{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.home #home_contents {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    background: #FFFFFF;
+}
+.home #home_contents #home_contents_body {
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.home #home_contents #home_contents_body #main_contents {
+    width: 660px;
+    overflow: hidden;
+    float: left;
+    margin-right: 40px;
+}
+.home #home_contents #home_contents_body #side_contents {
+    width: 300px;
+    overflow: hidden;
+    float: right;
+}
+
+/* category ==================== */
+
+.home #category {
+    width: 660px;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 60px;
+}
+
+.home #category ul {
+    overflow: hidden;
+    margin-bottom: 40px;
+    width: 660px;
+    margin: 0 auto;
+}
+.home #category ul li {
+    overflow: hidden;
+    float: left;
+    display: inline;
+}
+p.category_title {
+    font-weight: bold;
+    border: 1px solid #CCCCCC;
+	border-radius: 3px;		/* CSS3草案 */
+	-webkit-border-radius: 3px;	/* Safari,Google Chrome用 */
+    -moz-border-radius: 3px;	/* Firefox用 */
+}
+p.category_title i.fas.fa-tag {
+    float: left;
+    line-height: 20px;
+}
+.home #category ul li {
+    margin-right: 10px;
+}
+.home #category ul li a {
+    overflow: hidden;
+    padding: 10px 15px 10px 15px;
+    display: block;
+}
+.home #category ul li a:hover {
+    background: #E6E6E6;
+}
+
+
+/* popular_recipe ==================== */
+
+.home #popular_recipe {
+    width: 660px;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 60px;
+}
+.home #popular_recipe ul {
+    overflow: hidden;
+    float: right;
+}
+.home #popular_recipe ul li {
+    float: left;
+    display: inline;
+    width: 210px;
+    overflow: hidden;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.home #popular_recipe ul li.here {
+    margin-right: 0px !important;
+}
+.home #popular_recipe ul li img {
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
+}
+.home #popular_recipe ul li#popular_recipe_3,
+.home #popular_recipe ul li#popular_recipe_6 {
+    margin-right: 0px;
+}
+.home #popular_recipe ul li .recipe_details {
+    margin: 0 !important;
+    padding: 10px 0px 10px 0px;
+    width: auto;
+    overflow: hidden;
+}
+.home #popular_recipe ul li .recipe_details p.recipe_title {
+    width: 100%;
+}
+.home #popular_recipe ul li .recipe_details p.recipe_title a {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+ul.popular_recipe_icon {
+    width: auto !important;
+}
+ul.popular_recipe_icon li {
+    display: inline;
+    float: left;
+    width: auto !important;
+    height: auto !important;
+    margin-bottom: 0px !important;
+    margin-right: 10px !important;
+    padding: 0 !important;
+    border: none !important;
+}
+ul.popular_recipe_icon li i.fas.fa-eye,
+ul.popular_recipe_icon li i.fas.fa-heart,
+ul.popular_recipe_icon li i.fas.fa-comment {
+    margin: 0;
+    padding: 0;
+    float: none;
+    font-size: 10px;
+    color: #f2c5a2 !important;
+    line-height: 2;
+}
+/* new_recipe ==================== */
+
+.home #new_recipe {
+    width: 660px;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 60px;
+}
+.home #new_recipe ul li {
+    float: left;
+    display: inline;
+    margin-right: 12px;
+    width: 100px;
+}
+.home #new_recipe ul li .recipe_thumbnail {
+    margin-bottom: 5px;
+}
+.home #new_recipe ul li#new_recipe_6 {
+    margin-right: 0px;
+}
+.home #new_recipe .recipe_thumbnail {
+    width: 100px;
+    height: 100px;
+}
+.home #new_recipe .recipe_thumbnail img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* blog_ranking */
+
+.home #blog_ranking {
+    width: 300px;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 40px;
+}
+.home #blog_ranking ul {
+    width: 300px;
+    overflow: hidden;
+}
+.home #blog_ranking ul li {
+    width: 300px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #CCCCCC;
+}
+.home #blog_ranking ul li p.blog_title {
+    overflow: hidden;
+}
+
+
+/* new_blog_article */
+
+.home #article_new {
+    width: 300px;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 40px;
+}
+.home #article_new ul {
+    width: 300px;
+    overflow: hidden;
+}
+.home #article_new ul li {
+    width: 300px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #CCCCCC;
+}
+
+.home #article_new ul li .article_thumbnail {
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+.home #article_new ul li .article_thumbnail img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.home #article_new ul li p.article_title {
+    overflow: hidden;
+}
+p.beginning {
+    color: #403C36;
+    overflow: hidden;
+}
+
+/* notice ==================== */
+
+.home #notice {
+    width: 660px;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 60px;
+}
+.home #notice_topic {
+    width: 660px;
+    overflow: hidden;
+    background: #FFFFFF;
+}
+.home #notice dl {
+    width: 660px;
+    overflow: hidden;
+}
+.home #notice dl dt {
+    float: left;
+    margin-bottom: 10px;
+}
+.home #notice dl dd {
+    display: block;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom:  1px dotted #CCCCCC;
+}
+.home span.time {
+    margin-right: 10px;
+}
+.home p#notice_list_link {
+    background: #630;
+    border: none;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;   
+	border-radius: 5px;		/* CSS3草案 */
+	-webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 5px;	/* Firefox用 */
+}
+.home p#notice_list_link  a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: block;
+    color: #FFFFFF;
+}
+
+/* sponsor ==================== */
+
+.home #sponsor {
+    width: 300px;
+    height: 250px;
+    background: #000000;
+    float: right;
+    margin-bottom: 20px;
+}
+.home #bottom_sponsor ul {
+    width: 620px;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 80px;
+} 
+.home #bottom_sponsor ul li {
+    width: 300px;
+    height: 250px;
+    background: #000000;
+    float: left;
+    display: inline;
+    margin-right: 20px;
+}
+.home #bottom_sponsor ul li#here {
+    margin-right: 0px;
+}

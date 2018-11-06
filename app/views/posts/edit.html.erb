@@ -1,0 +1,122 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+    
+    <div id="page_body">
+        <div id="side_contents">
+            <div id="contribution_guide">
+                <ul>
+                    <li>投稿サンプル</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="main_contents_edit">
+        <%= form_tag(post_path, method: :put, multipart: true) do %>
+            <!-- //20180408追記 -->
+            <div>
+                <p class="title">レシピイメージ</p>
+                <input name="image" type="file" id="file_01" class="file">
+                <div id="file_mask">
+                <span><%= image_tag("/recipe_images/#{@post.recipe_image_name}") %></span>
+                </div>
+                <%= post_error_message(:recipe_image_name) %>
+            </div>
+            <div id="recipe_title">
+                <p class="title">レシピタイトル</p>
+                <input name="recipe_title" value="<%= @post.recipe_title %>">
+                <%= post_error_message(:recipe_title) %>
+            </div>
+            <div id="recipe_comment">
+                <p class="title">コメント</p>
+                <textarea name="recipe_description"><%= @post.recipe_description %></textarea>
+                <%= post_error_message(:recipe_description) %>
+            </div>
+            <!-- //20180408追記 -->
+
+            <div id="cooking_time">
+                <p class="title">調理時間（目安）</p>
+                <select name="cook_time">
+                    <option value="<%= @cooking_id %>"><%= @cooking_time %></option>
+                    <option value="1">10分以下</option>
+                    <option value="2">20分以下</option>
+                    <option value="3">30分以下</option>
+                    <option value="4">60分以下</option>
+                    <option value="5">60分以上</option>
+                </select>
+                <%= time_error_message(:cooktime) %>
+            </div>
+
+            <div id="number_persons">
+                <p class="title">何人分</p>
+                <select name="number_persons">
+                    <option value="<%= @post.number_persons %>"><%= @post.number_persons %></option>
+                    <option value="1人分">1人分</option>
+                    <option value="2人分">2人分</option>
+                    <option value="3人分">3人分</option>
+                    <option value="4人分">4人分</option>
+                    <option value="5人分以上">5人分以上</option>
+                </select>
+                <%= time_error_message(:cooktime) %>
+            </div>
+
+            <div id="recipe_category">
+                <p class="title">カテゴリー</p>
+                <select name="category">
+                    <option value="<%= @category_id %>"><%= @category_name %></option>
+                    <option value="1">ごはんもの</option>
+                    <option value="2">汁もの</option>
+                    <option value="3">麺もの</option>
+                    <option value="4">鍋もの</option>
+                    <option value="5">おかず</option>
+                    <option value="6">おやつ</option>
+                </select>
+                <%= category_error_message(:category) %>
+            </div>
+            <!-- //20180418追記 -->
+
+            <div id="recipe_material">
+                <p class="title">材料名と分量</p>
+                <ul>
+                <% if @post.materials.present? %>
+                    <% @post_material = @post.materials.group(:name) %>
+                    <% @post_material.each do |material| %>
+                        <li>
+                            <div class="material_list">
+                                <input class="material_name" name="material[][name]" value="<%= material.name %>">
+                            </div>
+                            <div class="material_list_here">
+                                <input class="material_quantity" name="material[][quantity]" value="<%= material.quantity %>">
+                            </div>
+                            <input type="button" value="追加" class="add">
+                            <input type="button" value="削除" class="del">
+                        </li>
+                    <% end %>
+                <% end %>
+                </ul>
+            </div>
+
+            <div id="cooking_recipe">
+                <p class="title">レシピ</p>
+                <ul>
+                <% if @post.recipe_steps.present? %>
+                    <% @post_step = @post.recipe_steps.group(:step) %>
+                    <% @post_step.each do |step| %>
+                        <li>
+                            <input class="recipe_step" name="recipe_step[]" value="<%= step.step %>">
+                            <input type="button" value="追加" class="add">
+                            <input type="button" value="削除" class="del">
+                        </li>
+                    <% end %>
+                <% end %>
+                </ul>
+            </div>
+
+                <div>
+                    <input type="submit" value="更新する">
+                </div>
+            </div>
+            <!-- //20180418追記 -->   
+        <% end %>
+        </div>
+    </div>
+</div>

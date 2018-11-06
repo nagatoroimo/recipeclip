@@ -1,0 +1,54 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+
+    <div id="page_body">
+        <div id="main_contents_ranking">
+            <p class="title">レシピブログ総合人気ランキング</p>
+            <table>
+                <tr>
+                    <th id="rank">順位</th>
+                    <th id="user">ユーザー</th> 
+                    <th id="blog">ブログ名・紹介文・最新記事</th>
+                    <th class="point">週間in</th>
+                    <th class="point">週間out</th>
+                </tr>
+                <% @week_vote_ranking.each_with_index do |blog, rank| %>
+                    <% @blog = Blog.find_by(id: blog.blog_id) %>
+                    <tr>
+                        <td class="rank">
+                            <p id="rank_<%= rank + 1 %>"><i class="fas fa-crown"></i></p><p><%= rank + 1 %>位</p>
+                        </td>
+
+                        <td class="user_thumbnail">
+                            <%= link_to image_tag("/user_images/#{@blog.user.image_name}"), "/users/#{@blog.user.id}" %>
+                        </td>
+
+                        <td class="blog_details">
+                            <p class="blog_title"><%= link_to @blog.blog_title, @blog.blog_url %></p>
+                            <p class="blog_description"><%= @blog.blog_description %></p>
+
+                            <div class="article_content">
+                                <p class="article_title">最新記事:<%= @blog.articles.last.created_at.strftime("%m/%d %H:%M") %></p>
+                                <ul class="new_article">
+                                    <% @blog.articles.order(created_at: :desc).each do |article| %>
+                                        <li><%= link_to article.title, "/blog/#{@blog.id}/article/#{article.id}/out" %></li>
+                                    <% end %>
+                                </ul>
+                            </div>
+                        </td>
+
+                        <td class="in_point">
+                            <% @week_in_point = WeekInPoint.where(blog_id: @blog.id).group(:blog_id).count %>
+                            <p><%= @week_in_point.values.sum %></p>
+                        </td>
+
+                        <td class="out_point">
+                            <% @week_out_point = WeekOutPoint.where(blog_id: @blog.id).group(:article_id).count %>
+                            <p><%= @week_out_point.values.sum %></p>
+                        </td>
+                    </tr>
+                <% end %>
+            </table>
+        </div>
+    </div>
+</div>

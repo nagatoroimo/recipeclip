@@ -1,0 +1,54 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+    
+    <div id="visual">
+        <p><img src="<%= "/page_images/#{@user.visual_image_name}"  %>"<p>
+    </div>
+
+    <div id="profile_content">
+        <div id="profile">
+            <p id="user_img"><img src="<%= "/user_images/#{@user.image_name}" %>"></p>
+
+            <div id="contributor">
+                <p id="user_name"><%= link_to(@user.name,"/users/#{@user.id}") %></p>
+                <p id="self_introduction"><%= @user.profile %></p>
+            </div>
+            <div id="count">
+                <ul>
+                    <li><%= link_to "/users/#{@user.id}/likes" do %>お気に入りレシピ<br><span class="count"><%= @likes_count %></span><% end %></li>
+                    <li><%= link_to "/users/#{@user.id}/follows" do %>フォロー<br><span class="count"><%= @follows_count %></span><% end %></li>
+                    <li><%= link_to "/users/#{@user.id}/followers" do %>フォロワー<br><span class="count"><%= @followers_count %></span><% end %></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="page_body">
+        <div id="main_contents_temp">
+            <div id="temp_recipes">
+            <p class="title">一時保存中のレシピ</p>
+                <% if @temp.exists? %>
+                    <ul>
+                        <% @temp.each_with_index do |temp, num| %>
+                        <li id="temp_<%= num + 1 %>" class="recipe_list">
+                            <p class="recipe_img">
+                                <% if temp.recipe_image_name.present? %>
+                                    <%= link_to image_tag("/recipe_images/#{temp.recipe_image_name}"),"/users/#{@user.id}/temp/#{temp.id}/edit" %>
+                                <% else %>
+                                    <%= link_to image_tag("/recipe_images/default_recipe_image.jpg"),"/users/#{@user.id}/temp/#{temp.id}/edit" %>
+                                <% end %>
+                            </p>
+                            <div class="recipe_details">
+                                <p class="recipe_title"><%= link_to(temp.recipe_title,"/users/#{@user.id}/temp/#{temp.id}/edit") %></p>
+                                <p class="recipe_description"><%= temp.recipe_description %></p>
+                            </div>
+                        </li>
+                        <% end %>
+                    </ul>
+                <% else %>
+                    <p>一時保存中のレシピはありません。</p>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

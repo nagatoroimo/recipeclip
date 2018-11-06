@@ -1,0 +1,148 @@
+@media screen and (min-width:1024px) {
+    .notices #wrapper {
+        width: 1000px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .notices #page_body {
+        width: 1000px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .notices p.title {
+        /* color: #630; */
+        color: #630;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 40px;
+        overflow: hidden;
+    }
+    .notices #main_contents_show {
+        width: 600px !important;
+        overflow: hidden;
+        margin-right: 20px !important;
+        padding: 40px !important;
+        float: left;
+        background: #FFFFFF !important;
+        border-radius: 5px;        /* CSS3草案 */  
+        -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 5px;   /* Firefox用 */
+    }
+    .notices #side_contents {
+        width: 260px;
+        overflow: hidden;
+        float: right;
+        background: #FFFFFF;
+        padding: 20px;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+    }
+    .notices #side_contents_common {
+        width: 300px;
+        overflow: hidden;
+        float: right;
+    }
+    .notices #side_contents_common #sponsor {
+        width: 300px;
+        height: 260px;
+        background: #000000;
+    }
+    .notices #notice_list {
+        width: 600px;
+        overflow: hidden;
+        padding: 0px !important;
+    }
+    .notices #notice_list ul {
+        width: 600px;
+        overflow: hidden;
+    }
+    .notices #notice_list ul li{
+        width: 600px;
+        overflow: hidden;
+        border-bottom: 1px dotted #D3C3B4;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    .notices .fas.fa-check-square {
+        margin-right: 5px;
+    }
+    .notices p.sub_title {
+        /* color: #630; */
+        color: #333333;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .notices .section {
+        width: 600px;
+        overflow: hidden;
+        margin-bottom: 40px;
+    }
+    p#registration_btn {
+        width: 250px;
+        height: 50px;
+        text-align: center;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        background: #630;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    p#registration_btn a {
+        color: #FFFFFF;
+        display: block;
+        line-height: 50px;
+    }
+    p#agreement {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    i.fas.fa-exclamation-circle {
+        float: left;
+        color: #630;
+        font-size: 18px;
+        line-height: 1.7;
+        margin-right: 10px;
+    }
+    .notices #notice_title input {
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        width: 578px;
+        border: 1px solid #D3C3B4;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .notices #notice_content textarea {
+        border: 1px solid #D3C3B4;
+        resize: none;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        width: 578px;
+        height: 600px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .notices input[type="submit"] {
+        background: #630;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        border: none;
+        color: #FFFFFF;
+        float: right;
+        cursor: pointer;
+        width: 180px;
+        margin-top: 20px;
+    }
+    .notices #contribution_btn {
+        width: 180px;
+    }
+}

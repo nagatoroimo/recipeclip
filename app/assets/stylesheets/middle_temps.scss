@@ -1,0 +1,181 @@
+@media screen and (max-width:960px) and (min-width:481px) {
+
+    /* visual */
+    .temps #visual p img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    /* profile */
+    .temps #profile_content {}
+    .temps #profile {
+        width: 100%;
+    }
+    .temps p#user_img {
+        width: 80px;
+        height: 80px;
+        float: left;
+        margin-top: -5px;
+        margin-left: 20px;
+        z-index: 9999999;
+        position: relative;
+        margin-right: 10px;
+    }
+    .temps p#user_img img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #FFFFFF;
+        float: left;
+    }
+    
+    .temps #contributor {
+        background: #FFFFFF;
+        padding: 20px;
+    }
+    .temps p#self_introduction {
+        margin-left: 90px;
+    }
+
+    /* count */
+    .temps #count {
+        width: auto;
+        overflow: hidden;
+        background: #630;
+    }
+    .temps #count ul{
+        border-left: 1px dotted #CCCCCC;
+        width: 90%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .temps #count ul li {
+        float: left;
+        display: inline;
+        width: 31%;
+        text-align: center;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        border-right: 1px dotted #CCCCCC;
+    }
+    .temps #count ul li a {
+        display: block;
+        color: #FFFFFF;
+    }
+    .temps span.count {
+        font-size: 16px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+
+
+    /* ログイン・新規会員登録画面 ================================ */
+
+    /* 共通 */
+
+    .temps #login_form input {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        border: 1px solid #D3C3B4;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    .temps p#password_forget {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .temps p#signup {
+        text-align: center;
+    }
+
+    .temps #main_contents_login {
+        overflow: hidden;
+        padding: 0 !important;
+        background: none !important;
+    }
+    .temps #login_form {
+        margin: 20px;
+        overflow: hidden;
+        background:#ecdfd6;
+        border: 1px solid #D3C3B4;
+        padding: 30px;
+    }
+    .temps #login_form #instruction {
+        text-align: center;
+        margin-bottom: 10px;    
+    }
+    .temps input[type="submit"] {
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-radius: 5px;        /* CSS3草案 */  
+        -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 5px;   /* Firefox用 */ 
+        text-align: center;
+        float: none;
+        background: #630;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+    .temps p#terms {
+        text-align: center;
+    }
+
+
+    /* temp_recipes */
+
+    .temps #main_contents_temp {
+    }
+    .temps #main_contents_temp #temp_recipes {
+        overflow: hidden;
+    }
+    .temps #main_contents_temp p.title {
+        background:#F7EEE7;
+        text-align: center;
+        font-weight: bold;
+        color: #630;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .temps #main_contents_temp #temp_recipes ul {
+        margin: 20px;
+        overflow: hidden;
+    }
+    .temps #main_contents_temp #temp_recipes ul li.recipe_list {
+        width: 49%;
+        overflow: hidden;
+        float: left;
+        display: inline;
+        margin-right: 2%;
+        margin-bottom: 2%;        
+    }
+    .temps #main_contents_temp #temp_recipes ul li#temp_2,
+    .temps #main_contents_temp #temp_recipes ul li#temp_4,
+    .temps #main_contents_temp #temp_recipes ul li#temp_6 {
+        margin-right: 0;
+    }
+    .temps #main_contents_temp #temp_recipes p.recipe_img {
+        width: 100%;
+        height: 150px;
+    }
+    .temps #main_contents_temp #temp_recipes .recipe_img img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    .temps #main_contents_temp #temp_recipes .recipe_details {
+        background: #FFFFFF;
+        padding-top: 5px;
+    }
+
+}

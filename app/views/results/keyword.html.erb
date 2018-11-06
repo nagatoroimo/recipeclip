@@ -1,0 +1,47 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+    
+    <div id="page_body">
+        <div id="main_contents_result">
+            <% if @keyword.present? %>
+              <p class="title">『<%= @keyword %>』のレシピ</p>
+            <% else %>
+              <p class="title">レシピ検索</p>
+            <% end %>
+            
+            <div id="search_recipe_list">
+                <% if @posts_results.blank? %>
+                    <p>検索条件に該当するレシピは見つかりませんでした。</p>
+                <% else %>
+                    <ul>
+                        <% @posts_results.each_with_index do |post, num| %>
+                            <li id="search_<%= num + 1 %>">
+                                <div class="recipe_img">
+                                    <%= link_to image_tag("/recipe_images/#{post.recipe_image_name}"),"/posts/#{post.id}" %>
+                                </div>
+                                <div class="recipe_title">
+                                    <%= link_to(post.recipe_title,"/posts/#{post.id}") %>
+                                </div>
+                            </li>
+                        <% end %>
+                    </ul>
+                <% end %>
+            </div>
+        </div>
+
+        <div id="side_contents">
+            <div id="sponsor">
+            </div>
+
+            <div id="popular_keyword">
+                <p class="sub_title">人気キーワード</p>
+                <ul>
+                    <% @keyword_search_count.each do |keyword, num| %>
+                        <li class="keyword"><%= link_to(keyword, "/keyword/#{keyword}") %></li>
+                    <% end %>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+
+    <div id="visual">
+    <p><img src="<%= "/page_images/#{@user.visual_image_name}"  %>"<p>
+    </div>
+
+    <div id="profile_content">
+        <div id="profile">
+            <p id="user_img"><img src="<%= "/user_images/#{@user.image_name}" %>"></p>
+
+            <div id="contributor">
+                <p id="user_name"><%= link_to(@user.name,"/users/#{@user.id}") %></p>
+                <p id="self_introduction"><%= @user.profile %></p>
+            </div>
+
+            <div id="count">
+                <ul>
+                    <li><%= link_to "/users/#{@user.id}/likes" do %>クリップレシピ<br><span class="count"><%= @likes_count %></span><% end %></li>
+                    <li><%= link_to "/users/#{@user.id}/follows" do %>フォロー<br><span class="count"><%= @follows_count %></span><% end %></li>
+                    <li><%= link_to "/users/#{@user.id}/followers" do %>フォロワー<br><span class="count"><%= @followers_count %></span><% end %></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="page_body">
+        <div id="main_contents_likes">
+            <div id="liked_recipes">
+                <p class="title"><%= @user.name %>さんのお気に入りレシピ</p>
+                <% if @likes.exists? %>
+                    <ul>
+                        <% @likes.each_with_index do |like, num| %>
+                            <% @post = Post.where(id: like.post_id) %>
+                            <% if @post.empty? %>
+                                <% like.destroy %>
+                            <% end %>
+                            <% @post.each do |post| %>
+                                <li id="like_<%= num + 1 %>">
+                                    <div class="recipe_img"><%= link_to image_tag("/recipe_images/#{post.recipe_image_name}"), "/posts/#{post.id}" %></div>
+                                    <div class="like_recipe_detail">
+                                        <p class="recipe_title"><%= link_to(post.recipe_title, "/posts/#{post.id}") %></p>
+                                        <p class="recipe_description"><%= post.recipe_description %></p>
+                                    </div>
+                                </li>
+                            <% end %>
+                        <% end %>
+                    </ul>
+                <% else %>
+                    <p>お気に入りレシピはありません。</p>
+                <% end %>
+            </div><!-- //liked_recipes -->
+        </div>
+    </div>
+</div>

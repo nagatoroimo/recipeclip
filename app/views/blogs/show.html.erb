@@ -1,0 +1,106 @@
+<div id="wrapper">
+    <div id="visual">
+        <p><img src="<%= "/page_images/#{@user.visual_image_name}"  %>"<p>
+    </div>
+
+    <div id="profile_content">
+        <div id="profile">
+            <p id="user_img"><img src="<%= "/user_images/#{@user.image_name}" %>"></p>
+
+            <div id="contributor">
+                <p id="user_name"><%= link_to(@user.name,"/users/#{@user.id}") %></p>
+                <p id="self_introduction"><%= @user.profile %></p>
+            </div>
+            <div id="count">
+                <ul>
+                    <li><%= link_to "/users/#{@user.id}/likes" do %>クリップレシピ<br><span class="count"><%= @likes_count %></span><% end %></li>
+                    <li><%= link_to "/users/#{@user.id}/follows" do %>フォロー<br><span class="count"><%= @follows_count %></span><% end %></li>
+                    <li><%= link_to "/users/#{@user.id}/followers" do %>フォロワー<br><span class="count"><%= @followers_count %></span><% end %></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="page_body">
+        <div id="main_contents_show">
+            <p class="title"><%= @user.name %>さんのブログ　プロフィール</p>
+            <div id="blog_profile">
+                <table>
+                    <tr>
+                        <th>ブログ名</th>
+                        <td><%= link_to @blog.blog_title, @blog.blog_url, :target => "blank" %></td>
+                    </tr>
+                    <tr>
+                        <th>ブログURL</th>
+                        <td><%= link_to @blog.blog_url, @blog.blog_url, :target => "blank" %></td>
+                    </tr>
+                    <tr>
+                        <th>ブログ紹介文</th>
+                        <td><%= @blog.blog_description %></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="blog_article">
+                <p class="title"><%= @user.name %>さんのブログ記事</p>
+                <ul>
+                    <% @blog.articles.each do |article| %>
+                        <li>
+                            <div class="article_thumbnail">
+                                <% if article.thumbnail.present? %>
+                                    <% if article.thumbnail.include?("assets") %>
+                                        <%= link_to image_tag("/recipe_images/default_recipe_image.jpg"), article.url, target: "_blank" %>
+                                    <% else %>
+                                        <%= link_to article.thumbnail.html_safe, article.url, target: "_blank" %>
+                                    <% end %>
+                                <% else %>
+                                    <p><%= link_to image_tag("/recipe_images/default_recipe_image.jpg"), article.url, target: "_blank" %></p>
+                                <% end %>
+                            </div>
+                            <div class="article_detail">
+                                <% if article.title.present? %>
+                                    <p><%= link_to article.title, article.url, :target => "blank" %></p>
+                                <% else %>
+                                    <p>タイトルがありません。</p>
+                                <% end %>
+
+                                <% if article.content.present? %>
+                                    <p><%= ApplicationController.helpers.strip_tags(article.content.truncate(50).html_safe) %><%= link_to "...続きを読む", article.url, :target => "blank" %></p>
+                                <% else %>
+                                    <p>コンテンツがありません。</p>
+                                <% end %>
+                            </div>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+
+        <div id="side_contents_show">
+            <div id="ranking_banner">
+                <p class="title">ブログにバナーを設置しよう！</p>
+                <p id="description">下記のランキング参加用バナーをブログサイトに設置してみよう！<br>設置すると、<%= @user.name %>さんのブログに下記のバナーが表示されるようになります。<br><%= @user.name %>さんのブログのアクセスアップにつながります。 </p>
+                <p class="banner_img"><%= link_to image_tag("ranking_btn_02.gif"), "/blog/#{@user.id}/#{@blog.id}/in", :target => "blank" %><br>レシピクリップに参加中</p>
+                <div id="banner_tag">
+                    <textarea onclick="this.select(0,this.value.length)"><a href="http://localhost:3000/blog/<%= @user.id %>/<%= @blog.id %>/in"><img src="http://localhost:3000/assets/ranking_btn_02-50909503ba54849fac34cf5913d1df325222fcd1e34103d8a04045e3f9e8f88b.gif"></a><br><a href="http://localhost:3000/blog/<%= @user.id %>/<%= @blog.id %>/in">レシピクリップに参加中</a></textarea>
+                    <p id="supplement"><%= @user.name %>さんの専用バナーです。コピーして記事入力欄に貼り付けるとバナーが表示されます。</p>
+                </div>
+            </div>
+
+            <div id="blog_menu">
+                <ul>
+                    <li>
+                        <%= link_to("/qa") do %>
+                            <i class="fas fa-question-circle">バナーの貼り方について</i>
+                        <% end %>
+                    </li>
+                    <li id="here">
+                        <%= link_to("/blog/#{@user.id}/#{@blog.id}/edit") do %>
+                            <i class="fas fa-user-edit">登録ブログ設定変更</i>
+                        <% end %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

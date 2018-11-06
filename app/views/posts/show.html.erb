@@ -1,0 +1,168 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+
+    <div id="page_body">
+        <div id="main_contents_show">
+            <div class="section">
+            <% if @current_user %>
+                <div id="share">
+                    <% if session[:user_id] %>
+                        <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
+                            <%= link_to("/likes/#{@post.id}/destroy",{method:"post"}) do %>
+                            <i class="fas fa-paperclip">クリップしました</i>
+                            <% end %>
+                        <% else %>
+                            <%= link_to("/likes/#{@post.id}/create",{method:"post"}) do %>
+                            <i class="fas fa-paperclip">クリップ</i>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                </div>
+            <% end %>
+
+            <div class="recipe_image">
+                <img src="<%= "/recipe_images/#{@post.recipe_image_name}" %>">
+            </div>
+
+            <div class="premise">
+                <ul>
+                <li><i class="fas fa-utensils"></i><%= link_to @subject_category.name, category_path(@subject_category.id) %></li>
+                <li><i class="fas fa-clock"></i><%= @subject_cooktime.time %></li>
+                <li><i class="fa fa-user"></i><%= @number_persons %></li>
+                </ul>
+            </div>
+
+            <div class="recipe_title">
+                <p><%= @post.recipe_title %></p>
+            </div>
+            <div class="recipe_description">
+                <p><%= @post.recipe_description %></p>
+            </div>
+            </div><!-- //section -->
+            
+            <div class="section">
+                <!-- //20180416追記 -->
+                <div id="recipe_material">
+                <p class="title">材料・調味料</p>
+                <dl>
+                    <% @material.each do |material| %>
+                        <dt><%= material.name %></dt><dd><%= material.quantity %></dd>
+                    <% end %>
+                </dl>
+                </div>
+                <!-- //20180416追記 -->
+            </div><!-- //section -->
+
+            <div class="section">
+                <div id="cooking_recipe">
+                <p class="title">レシピ</p>
+                <ul>
+                    <% @post_recipe_step.each do |step| %>
+                        <li><p><%= step.step %></p></li>
+                    <% end %>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="contribution_contents">
+        <!-- //20180612追記 -->
+            <p class="title">みんなの投稿(<%= @contribution_count %>)</p>
+            <div id="contribtion_list">
+                <% if @contribution.exists? %>
+                    <% @contribution.each do |contribution| %>
+                        <div id="contribtion">
+                        <% contribution_user = User.find_by(id: contribution.user_id) %>
+                            <p class="contribution_user_img"><%= link_to image_tag("/user_images/#{contribution_user.image_name}"),"/users/#{contribution_user.id}" %></p>
+                            <p class="contribution_user_name"><%= link_to(contribution_user.name,"/users/#{contribution_user.id}") %></p>
+                            <p class="comment"><%= contribution.content %></p>
+
+                            <% if session[:user_id] %>
+                                <% if contribution.user_id.to_i == @current_user.id %>
+                                    <p class="guide_link"><%= link_to("削除","/contributions/#{contribution.id}/destroy", {method: "post"}) %></p>
+                                <% else %>
+                                    <p class="guide_link"><%= link_to("返信","/contributions/reply") %></p>
+                                <% end %>
+                            <% end %>
+                        </div>
+                    <% end %>
+                <% else %>
+                    <p>投稿メッセージはありません。</p>
+                <% end %>
+            </div>
+            <div id="contribtion_area">
+                <%= form_tag("/contributions/#{@post.id}/create") do %>
+                    <textarea name="content"></textarea>
+                    <% if @current_user %>
+                        <p class="contribution_btn"><input type="submit" value="投稿する"></p>
+                    <% else %>
+                        <p class="contribution_btn"><%= link_to("ログインして投稿する", "/login") %></p>
+                    <% end %>
+                <% end %>
+            </div>
+            <!-- //20180612追記 -->
+        </div>
+
+        <div id="side_contents">
+            <div id="sponsor">
+            </div>
+
+            <div id="contributor">
+                <div id="contributor_info">
+                    <p id="user_img"><img src="<%= "/user_images/#{@user.image_name}" %>"></p>
+                    <p id="user_name"><%= link_to(@user.name,"/users/#{@user.id}") %></p>
+                    <p id="user_profile"><%= @user.profile %></p>
+                    <% if session[:user_id] %>
+                    <% if @post.user_id == @current_user.id %>
+                        <div id="contributor_sub_menu">
+                            <ul>
+                                <li><%= link_to "レシピ編集", edit_post_path %></li>
+                                <li><%= link_to "レシピ削除", post_path, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></li>
+                            </ul>
+                        </div>
+                    <% end %>
+                <% end %>
+
+                <% if session[:user_id] %>
+                    <div id="follow">
+                        <% if Follow.find_by(user_id: @current_user.id, follow_user_id: @user.id) %>
+                            <p id="follow_btn"><%= link_to("フォロー解除","/follows/#{@user.id}/destroy", {method:"post"}) %></p>
+                        <% else %>
+                            <p id="follow_btn"><%= link_to("フォローする","/follows/#{@user.id}/create", {method:"post"}) %></p>
+                        <% end %>
+                    </div>
+                <% end %>
+                </div>
+            </div>
+
+            <div id="recommend_recipe">
+                <p class="sub_title">こちらのレシピもおすすめ！</p>
+                <ul>
+                    <% @post_pr.each_with_index do |post, num| %>
+                        <li id="reccommend_<%= num + 1 %>">
+                            <div class="reccommend_recipe_img">
+                                <%= link_to image_tag("/recipe_images/#{post.recipe_image_name}"),"/posts/#{post.id}" %>
+                            </div>
+                            <div class="reccommend_recipe_name">
+                                <%= link_to(post.recipe_title, "/posts/#{post.id}") %>
+                            </div>
+                        </li>
+                    <% end %>
+                <ul>
+            </div>
+
+            <div id="notice_list">
+                <p class="sub_title">新着お知らせ</p>
+                <ul>
+                    <% @notice.each do |notice| %>
+                        <li>
+                            <p><%= notice.created_at.strftime("%y.%m.%d") %></p>
+                            <p><%= link_to notice.title, notice_path(notice) %></p>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>

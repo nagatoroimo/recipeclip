@@ -1,0 +1,136 @@
+@media screen and (min-width:1024px) {
+    table {
+        border-top: 1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    table th,td {
+        padding: 10px;
+        border-right: 1px solid #CCCCCC;
+        border-bottom: 1px dotted #CCCCCC;
+    }
+    table th {
+        background: #F8F8F8;
+    }
+    table th#rank {
+        width: 30px;
+    }
+    table th#user {
+        width: 60px;
+    }
+    table th#blog {
+    }
+    table th.point {
+        width: 60px;
+    }
+    .votes #main_contents_ranking {
+        overflow: hidden;
+        background: #FFFFFF;
+        margin: 0 auto;
+        padding: 40px;
+    }
+    .votes #main_contents_ranking p.title {
+        color: #630;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    .votes table td.rank {
+        width:50px;
+        overflow: hidden;
+        text-align: center;
+    }
+    .votes #main_contents_ranking .rank i.fas.fa-crown {
+        font-size: 18px;
+    }
+    .votes #main_contents_ranking .rank p.rank {
+        clear: left;
+    }
+    .votes #main_contents_ranking .rank p#rank_1 {
+        color: #B8860B;
+    }
+    .votes #main_contents_ranking .rank p#rank_2 {
+        color: #696969;
+    }
+    .votes #main_contents_ranking .rank p#rank_3 {
+        color: #8B4513;
+    }
+    .votes #main_contents_ranking .rank p#rank_4,
+    .votes #main_contents_ranking .rank p#rank_5,
+    .votes #main_contents_ranking .rank p#rank_6,
+    .votes #main_contents_ranking .rank p#rank_7,
+    .votes #main_contents_ranking .rank p#rank_8,
+    .votes #main_contents_ranking .rank p#rank_9,
+    .votes #main_contents_ranking .rank p#rank_10 {
+        display: none;
+    }
+
+    .votes #main_contents_ranking td.user_thumbnail {
+        width: 50px;
+    }
+    .votes #main_contents_ranking td.user_thumbnail img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+    .votes #main_contents_ranking table td.blog_content {
+        width: 920px;
+        overflow: hidden;
+        float: left;
+        border-bottom: 1px dotted #CCCCCC;
+        border-left: 0px !important;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+    .votes #main_contents_ranking p.blog_title {
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+    .votes #main_contents_ranking p.blog_title a{
+        color: #630;
+        font-size: 16px !important;
+        font-weight: bold;
+    }
+    .votes #main_contents_ranking p.blog_description {
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+    .votes #main_contents_ranking table {
+        border-bottom: 1px solid #CCCCCC;
+    }
+    .votes #main_contents_ranking table td.blog_details {
+        overflow: hidden;
+    }
+    .votes #main_contents_ranking table td.blog_details .article_content {
+        overflow: hidden;
+    }
+    .votes #main_contents_ranking table td.blog_details .article_content p.article_title {
+        float: left;
+        margin-right: 10px;
+    }
+    .votes #main_contents_ranking table td.blog_details ul.new_article {
+    }
+    .votes #main_contents_ranking table td.blog_details ul.new_article li {
+        float: left;
+        display: inline;
+        border-right: 1px solid #CCCCCC;
+        padding-right: 10px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+    .votes #main_contents_ranking table td.blog_details ul.new_article li  a {
+        color: #630;
+    }
+
+    .votes #main_contents_ranking table td.in_point {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+    }
+    .votes #main_contents_ranking table td.out_point {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+    }
+}

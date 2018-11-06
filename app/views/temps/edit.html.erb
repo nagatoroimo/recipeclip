@@ -1,0 +1,151 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+    
+    <div id="page_body">
+        <div id="side_contents">
+            <div id="contribution_guide">
+                <ul>
+                    <li><%= link_to("削除する", "/users/#{@user.id}/temp/#{@temp.id}/destroy", method: :post, data: { confirm: '本当に削除してよろしいですか？' }) %></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="main_contents_edit">
+            <%= form_tag("/users/#{@user.id}/temp/#{@temp.id}/update", method: :post, multipart: true) do %>
+                <div id="file_btn">
+                    <p class="title">レシピイメージ</p>
+                    <% if @temp.recipe_image_name.present? %>
+                        <input name="image" type="file" id="file_01" class="file" value="<%= @temp.recipe_image_name %>">
+                        <div id="file_mask" class="image_file_exist">
+                            <span><%= image_tag("/recipe_images/#{@temp.recipe_image_name}") %></span>
+                        </div>
+                    <% else %>
+                        <input name="image" type="file" id="file_01" class="file">
+                        <div id="file_mask">
+                            <span></span>
+                        </div>
+                    <% end %>
+                    <%= post_error_message(:recipe_image_name) %>
+                </div>
+
+                <div id="recipe_title">
+                    <p class="title">レシピタイトル</p>
+                    <input name="recipe_title" placeholder="レシピ名" value="<%= @temp.recipe_title %>">
+                    <%= post_error_message(:recipe_title) %>
+                </div>
+
+                <div id="recipe_comment">
+                    <p class="title">コメント</p>
+                    <textarea name="recipe_description" placeholder="レシピの紹介文"><%= @temp.recipe_description %></textarea>
+                    <%= post_error_message(:recipe_description) %>
+                </div>
+
+                <div id="cooking_time">
+                    <p class="title">調理時間（目安）</p>
+                    <select name="cook_time">
+                        <option value=<%= @cooktime_id %>><% if @temp.cooking_time.present? %><%= @temp.cooking_time %><% else %>調理時間<% end %></option>
+                        <option value="1">10分以下</option>
+                        <option value="2">20分以下</option>
+                        <option value="3">30分以下</option>
+                        <option value="4">60分以下</option>
+                        <option value="5">60分以上</option>
+                    </select>
+                    <%= time_error_message(:cooktime) %>
+                </div>
+
+                <div id="number_persons">
+                    <p class="title">何人分</p>
+                    <select name="number_persons">
+                        <option value="<%= @temp.number_persons %>"><% if @temp.number_persons.present? %><%= @temp.number_persons %><% else %>何人分<% end %></option>
+                        <option value="1人分">1人分</option>
+                        <option value="2人分">2人分</option>
+                        <option value="3人分">3人分</option>
+                        <option value="4人分">4人分</option>
+                        <option value="5人分以上">5人分以上</option>
+                    </select>
+                    <%= post_error_message(:number_persons) %>
+                </div>
+
+                <div id="recipe_category">
+                    <p class="title">カテゴリー</p>
+                    <select name="category">
+                        <option value="<%= @category_id %>"><% if @temp.category.present? %><%= @temp.category %><% else %>カテゴリー<% end %></option>
+                        <option value="1">ごはんもの</option>
+                        <option value="2">汁もの</option>
+                        <option value="3">麺もの</option>
+                        <option value="4">鍋もの</option>
+                        <option value="5">おかず</option>
+                        <option value="6">おやつ</option>
+                    </select>
+                    <%= category_error_message(:category) %>
+                </div>
+                <!-- //20180418追記 -->
+
+                <div id="recipe_material">
+                    <p class="title">材料名と分量</p>
+                    <ul>
+                        <% if @temp.temporarily_materials.present? %>
+                            <% @temp_material = @temp.temporarily_materials.group(:temp_name) %>
+                                <% @temp_material.each do |material| %>
+                                <li>
+                                    <div class="material_list">
+                                        <input class="material_name" name="temporarily_material[][name]" value="<%= material.temp_name %>">
+                                    </div>
+                                    <div class="material_list_here">
+                                        <input class="material_quantity" name="temporarily_material[][quantity]" value="<%= material.temp_quantity %>">
+                                    </div>
+                                    <input type="button" value="追加" class="add">
+                                    <input type="button" value="削除" class="del">
+                                </li>
+                            <% end %>
+                        <% else %>
+                            <li>
+                                <div class="material_list">
+                                    <input class="material_name" name="temporarily_material[][name]" placeholder="材料">
+                                    <%= material_error_message(:name)%>
+                                </div>
+                                <div class="material_list_here">
+                                    <input class="material_quantity" name="temporarily_material[][quantity]" placeholder="分量">
+                                    <%= material_error_message(:quantity) %>                        
+                                </div>
+                                <input type="button" value="追加" class="add">
+                                <input type="button" value="削除" class="del">
+                            </li>
+                        <% end %>
+                    </ul>
+                </div>
+
+                <div id="cooking_recipe">
+                    <p class="title">レシピ</p>
+                    <ul>
+                        <% if @temp.temp_recipe_steps.present? %>
+                        <% @temp_recipe_step = @temp.temp_recipe_steps.group(:step) %>
+                        <% @temp_recipe_step.each do |step| %>
+                            <li>
+                                <input class="recipe_step" name="temp_recipe_step[]" value="<%= step.step %>">
+                                <input type="button" value="追加" class="add">
+                                <input type="button" value="削除" class="del">
+                            </li>
+                            <% end %>
+                        <% else %>
+                            <li>
+                                <input class="recipe_step" name="temp_recipe_step[]" placeholder="作り方">
+                                <input type="button" value="追加" class="add">
+                                <input type="button" value="削除" class="del">
+                            </li>
+                            <%= step_error_message(:step) %>                        
+                        <% end %>
+                    </ul>
+                </div>
+
+                <div id="storage">
+                    <ul>
+                        <li><button name="temp" type="submit" value="temp">一時保存する</button></li>
+                        <li id="here"><button name="public" type="submit" value="public">レシピを公開する</button></li>
+                    </ul>
+                </div>
+            </div>
+        <% end %>
+        </div>
+    </div>
+</div>

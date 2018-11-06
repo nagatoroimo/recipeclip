@@ -1,0 +1,94 @@
+@media screen and (min-width:1024px) {
+
+    /* カテゴリーページCSS */
+
+    .categories p.title {
+        color: #630;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    .categories #page_body {
+        width: 1000px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .categories #main_contents_category {
+        width: 1000px;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 0 !important;
+        background: none !important;
+    }
+    .categories #main_contents_category h2 {
+        margin-bottom: 20px;
+    }
+
+    .categories #main_contents_category #category_recipe_list {
+        width: 600px;
+        overflow: hidden;
+        float: left;
+        background: #FFFFFF;
+        padding: 40px;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+    }
+    .categories #main_contents_category #category_recipe_list ul {
+        width: 600px;
+        overflow: hidden;
+    }
+    .categories #main_contents_category #category_recipe_list ul li {
+        width: 190px;
+        float: left;
+        display: inline;
+        margin-right: 15px;
+        margin-bottom: 20px;
+    }
+    .categories #main_contents_category #category_recipe_list ul li#recipe_3,
+    .categories #main_contents_category #category_recipe_list ul li#recipe_6,
+    .categories #main_contents_category #category_recipe_list ul li#recipe_9,
+    .categories #main_contents_category #category_recipe_list ul li#recipe_12,
+    .categories #main_contents_category #category_recipe_list ul li#recipe_15,
+    .categories #main_contents_category #category_recipe_list ul li#recipe_18{
+        margin-right: 0px;
+    }
+
+    .categories #main_contents_category #category_recipe_list .recipe_img {
+        width: 190px;
+        height: 190px;
+        background: #000000;
+        margin-bottom: 10px;
+    }
+    .categories #main_contents_category #category_recipe_list .recipe_img img {
+        width: 190px;
+        height: 190px;
+        object-fit: cover;
+    }
+
+    .categories #main_contents_category .category_type {
+        margin-bottom: 40px;
+    }
+    .categories #main_contents_category .category_type .recipe_img {
+        width: 100px;
+        height: 100px;
+        background: #000000;
+    }
+    .categories #main_contents_category .category_type .recipe_img img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .categories #side_contents  {
+        float: right;
+    }
+    .categories #side_contents #sponsor {
+        width: 300px;
+        height: 260px;
+        background: #000000;
+        margin-bottom: 20px;
+    }
+}

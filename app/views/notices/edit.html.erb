@@ -1,0 +1,29 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+    
+    <div id="page_body">
+        <div id="main_contents_index">
+            <div id="notice_contribution">
+                <p class="title">お知らせ編集</p>
+                <%= form_tag(notice_path, method: :put) do %>
+                    <div id="notice_title">
+                        <p class="sub_title">お知らせタイトル</p>
+                        <input name="title" value="<%= @notice.title %>">
+                    </div>
+                    <div id="notice_content">
+                        <p class="sub_title">お知らせ内容</p>
+                        <textarea name="content"><%= @notice.content %></textarea>
+                    </div>
+                    <div id="contribution_btn">
+                            <input type="submit" value="お知らせを編集する">
+                    </div>
+                <% end %>
+            </div>
+        </div>
+
+        <div id="side_contents_common">
+            <div id="sponsor">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+
+    <div id="visual">
+    <p><img src="<%= "/page_images/#{@user.visual_image_name}"  %>"<p>
+    </div>
+
+    <div id="profile_content">
+        <div id="profile">
+            <p id="user_img"><img src="<%= "/user_images/#{@user.image_name}" %>"></p>
+
+            <div id="contributor">
+                <p id="user_name"><%= link_to(@user.name,"/users/#{@user.id}") %></p>
+                <p id="self_introduction"><%= @user.profile %></p>
+            </div>
+
+            <div id="count">
+                <ul>
+                    <li><%= link_to "/users/#{@user.id}/likes" do %>クリップレシピ<br><span class="count"><%= @likes_count %></span><% end %></li>
+                    <li><%= link_to "/users/#{@user.id}/follows" do %>フォロー<br><span class="count"><%= @follows_count %></span><% end %></li>
+                    <li><%= link_to "/users/#{@user.id}/followers" do %>フォロワー<br><span class="count"><%= @followers_count %></span><% end %></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="page_body">
+        <div id="main_contents_followers">
+            <div id="follower_user_list">
+                <p class="title"><%= @user.name %>さんのフォロワー</p>
+                <% if @followers.exists? %>
+                <ul>
+                    <% @followers.each_with_index do |follower, num| %>
+                        <% user = User.find_by(id: follower.user_id) %>
+                        <li id="follower_<%= num + 1 %>">
+                        <div class="follower_user_img"><%= link_to image_tag("/user_images/#{user.image_name}"),"/users/#{user.id}" %></div>
+                        <div class="follower_user_name"><%= link_to(user.name,"/users/#{user.id}") %></div>
+                        <div class="follower_user_profile"><%= user.profile %></div>
+                        </li>
+                    <% end %>
+                </ul>
+                <% else %>
+                    <p>現在フォローされていません。</p>
+                <% end %>
+            </div><!-- //liked_recipes -->
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,70 @@
+body.qa {
+    background: #F7EEE7;
+}
+.qa #page_body {
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.qa #main_contents_qa {
+    width: 600px !important;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 40px !important;
+    float: left;
+    background: #FFFFFF !important;
+    border-radius: 5px;        /* CSS3草案 */  
+    -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 5px;   /* Firefox用 */
+}
+
+.qa .section {
+}
+.qa .section a {
+    color: #630;
+}
+.qa .section p {
+    margin-bottom: 10px;
+}
+.qa .section .question {
+    margin-bottom: 10px;
+}
+p.question_title {
+    font-weight: bold;
+    font-size: 18px;
+}
+.qa .section .answer ul#blog_service {
+    margin-bottom: 10px;
+}
+.qa .section .answer ul#blog_service li {
+    margin-bottom: 5px;
+}
+
+.qa .section .answer p.sub_title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+
+
+.qa #side_contents {
+    width: 300px;
+    overflow: hidden;
+    float: right;
+    background: #FFFFFF;
+}
+
+
+
+/* sponsor ==================== */
+
+.qa #sponsor {
+    width: 300px;
+    height: 250px;
+    background: #000000;
+    float: right;
+}

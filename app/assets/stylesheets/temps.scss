@@ -1,0 +1,693 @@
+@media screen and (min-width:1024px) {
+    body.users {
+        background: #F7EEE7;
+    }
+    .temps #page_body {
+        width: 1000px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .temps .error_message {
+        background: #FF6347;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        color: #FFFFFF;
+        margin-top: 5px;
+        clear: both;
+        position: relative;
+        background-color: #FF6347;
+        border: 2px solid #FF6347;
+        border-radius: 3px;        /* CSS3草案 */  
+        -webkit-border-radius: 3px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 3px;   /* Firefox用 */ 
+    }
+    /* beforeで枠線の三角を表現 */
+    .temps .error_message::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 20px;
+    top: -10px;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #FF6347;
+    border-left: 10px solid transparent;
+    }
+
+    /* beforeで本体の三角を表現 */
+    .tempss .error_message::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 20px;
+    top: -12px;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #FF6347;
+    border-left: 10px solid transparent;
+    }
+
+
+    .temps #visual {
+        width: 100%;
+        height: 300px;
+    }
+    .temps #visual p img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    .temps #profile_content {
+        width: 100%;
+        height: 80px;
+        background: #f8f8f8;
+    }
+    .temps #profile {
+        width: 1000px;
+        height: 80px;
+        margin: 0 auto;
+    }
+    .temps #contributor {
+        max-width: 550px;
+        overflow: hidden;
+        padding-top: 10px;
+        padding-left: 10px;
+        float: left;
+    }
+    .temps p#user_img {
+        width: 100px;
+        height: 100px;
+        float: left;
+        margin-top: -40px;
+        z-index: 999999;
+        position: relative;
+    }
+
+
+    .temps #follow_user_list {
+    }
+    .temps #follow_user_list ul li {
+        width: 310px;
+        height: 310px;
+        background: #FFFFFF;
+        margin-right: 20px;
+    }
+    .temps p#user_img img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+        border: 2px solid #FFFFFF;
+        float: left;
+    }
+    .temps p#user_name {
+        font-weight: bold;
+    }
+    .temps p#user_name a {
+        font-size: 16px;
+    }
+
+    .temps .head_visual {
+        width: 310px;
+        height: 100px;
+        background: #000000;
+    }
+    .temps .head_visual img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+    }
+    .temps .follow_user_profile {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-top: 30px;
+    }
+    .temps p.follow_user_img {
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: -40px;
+        margin-bottom: 10px;
+        position: absolute;
+        top: 100px;
+        left: 15px;
+    }
+    .temps p.follow_user_img img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        object-fit: cover;
+        border: 2px solid #FFFFFF;
+        float: left;
+    }
+    .temps p.follow_user_name {
+        clear: both;
+    }
+
+
+
+    .temps #follower_user_list {
+        width: 1000px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .temps #follower_user_list ul li {
+        width: 260px;
+        height: 80px;
+        background: #FFFFFF;
+        margin-right: 20px;
+        padding: 20px;
+        float: left;
+        display: inline;
+    }
+    .temps .follower_user_img {
+        width: 80px;
+        height: 80px;
+        float: left;
+        margin-right: 20px;
+    }
+    .temps .follower_user_img img{
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+        object-fit: cover;
+        float: left;
+    }
+
+
+
+    .temps #count {
+        width: auto;
+        overflow: hidden;
+        float: right;
+        margin-top: 10px;
+    }
+    .temps #count ul{
+        border-left: 1px dotted #CCCCCC;
+        width: auto;
+        overflow: hidden;
+    }
+    .temps #count ul li {
+        float: left;
+        display: inline;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        border-right: 1px dotted #CCCCCC;
+    }
+    .temps #count ul li a {
+        display: block;
+    }
+    .temps span.count {
+        font-size: 16px;
+        font-weight: bold;
+        color: #630;
+    }
+
+    .temps #wrapper {
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .temps p.title {
+        /* color: #630; */
+        color: #333333;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+
+    .temps #main_contents_show #temp_recipes ul {
+        width: 1000px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .temps #main_contents_show #temp_recipes ul li#temp_3,
+    .temps #main_contents_show #temp_recipes ul li#temp_6,
+    .temps #main_contents_show #temp_recipes ul li#temp_9 {
+        margin-right: 0px;
+    }
+    .temps #main_contents_show #temp_recipes ul li.recipe_list{
+        width: 310px;
+        height: 310px;
+        background: #FFFFFF;
+        float: left;
+        display: inline;
+        margin-right: 35px;
+        margin-bottom: 35px;
+    }
+    .temps #main_contents_show #temp_recipes p.recipe_img {
+        width: 310px;
+        height: 200px;
+    }
+    .temps #main_contents_show #temp_recipes .recipe_img img {
+        width: 310px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .temps #main_contents_temp {
+        width: 1000px;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 0 !important;
+        background: none !important;
+    }
+    .temps #main_contents_temp .recipe_details {
+        padding: 20px;
+    }
+    .temps #main_contents_temp .recipe_details p.user_img{
+        clear: both;
+    }
+    .temps #main_contents_temp .recipe_details p.user_name {
+        float: none;
+    }
+    .temps p.recipe_title {
+        clear: both;
+        font-weight: bold;
+    }
+    .temps p.recipe_title a{
+        font-size: 16px;
+    }
+    .temps .recipe_details p.recipe_description {
+    }
+
+
+
+    /* 一時保存レシピ一覧 */
+
+    .temps #main_contents_edit {
+        width: 600px !important;
+        overflow: hidden;
+        margin-right: 20px !important;
+        padding: 40px !important;
+        float: left;
+        background: #FFFFFF !important;
+    }
+
+
+    .temps #temp_recipes {
+        float: left;
+        width: 1000px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .temps #temp_recipes ul li {
+        width: 310px;
+        height: 310px;
+        background: #FFFFFF;
+        margin-right: 20px;
+        position: relative;
+        float: left;
+        display: inline;
+        margin-bottom: 20px;
+    }
+
+    .temps .recipe_img {
+        width: 310px;
+        height: 200px;
+        background: #000000;
+    }
+    .temps .recipe_img img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .temps p.contributor_user_img {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 160px;
+        left: 15px;
+    }
+    .temps p.contributor_user_img img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        object-fit: cover;
+        border: 2px solid #FFFFFF;
+        float: left;
+    }
+
+
+
+    /*  */
+
+    .temps #file_btn {
+        margin-bottom: 20px;
+    }
+    .temps #file_btn img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .temps input[type="file"] {
+        border: none;
+    }
+    .temps #file_01,
+    .temps #mask_file_01 {
+        display: none;
+    }
+    .temps #main_contents_edit .image_file_exist {
+        height: 400px !important;
+    }
+    .temps #main_contents_edit .image_file_exist span {
+        display:block;
+        background: none !important;
+        width: 600px;
+        height: 400px !important;
+        cursor:pointer;
+        margin-bottom: 20px;
+    }
+    .temps #main_contents_edit .image_file_exist span img {
+        height: 400px !important;
+    }
+    .temps #main_contents_edit #file_mask span{
+        display:block;
+        background: image-url("input_file.jpg");
+        background-position: center;
+        width: 600px;
+        height: 200px;
+        overflow: hidden;
+        cursor:pointer;
+    }
+
+    .temps #main_contents_edit #recipe_image {
+        width: 600px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+    .temps #main_contents_edit #recipe_image img {
+        width: 600px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+
+
+    .temps input[type="submit"] {
+        background: #630;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        border: none;
+        color: #FFFFFF;
+        float: right;
+        cursor: pointer;
+        width: 100px;
+        margin-top: 20px;
+    }
+    .temps #recipe_title input {
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        width: 578px;
+        border: 1px solid #D3C3B4;
+        padding: 10px;
+    }
+
+    .temps p.sub_title {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .temps #recipe_comment {
+        margin-top: 20px;
+    }
+    .temps #recipe_comment textarea {
+        border: 1px solid #D3C3B4;
+        resize: none;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        width: 578px;
+        height: 100px;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 10px;
+        display: block;
+    }
+    .temps #recipe_category {
+        margin-top: 20px;
+        width: 180px;
+        overflow: hidden;
+        float: left;
+    }
+
+    .temps #recipe_category select {
+        border: 1px solid #D3C3B4;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        padding: 10px;
+        width: 180px;
+    }
+    .temps #cooking_time {
+        margin-top: 20px;
+        width: 180px;
+        overflow: hidden;
+        float: left;
+        margin-right: 30px;
+    }
+    .temps #cooking_time select {
+        border: 1px solid #D3C3B4;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        padding: 10px;
+        width: 180px;
+    }
+    .temps #number_persons {
+        margin-top: 20px;
+        width: 180px;
+        overflow: hidden;
+        float: left;
+        margin-right: 30px;
+    }
+    .temps #number_persons select {
+        border: 1px solid #D3C3B4;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        padding: 10px;
+        width: 180px;
+    }
+
+
+
+
+    .temps #recipe_material dl {
+        width: 600px;
+        overflow: hidden;
+    }
+    .temps #recipe_material dl dt {
+        float: left;
+        text-align: left;
+        border-bottom: 1px dotted #E6E6E6;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    .temps #recipe_material dl dd {
+        text-align: right;
+        border-bottom: 1px dotted #E6E6E6;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    .temps #recipe_material {
+        margin-top: 20px;
+        float: left;
+    }
+    .temps #recipe_material ul{
+        width: 100%;
+        overflow: hidden;
+    }
+    .temps #recipe_material li {
+        float: left;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .material_list {
+        float: left;
+        width: 239px;
+        margin-right: 10px;
+    }
+    .material_list_here {
+        width: 239px;
+        margin-right: 10px;
+        float: left;
+    }
+
+    .temps #cooking_recipe {
+        margin-top: 10px;
+        float: left;
+    }
+    .temps #cooking_recipe ul li {
+        width: 600px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    span.step_number {
+        background: #630;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        color: #FFFFFF;
+        border-radius: 20px;		/* CSS3草案 */
+        -webkit-border-radius: 20px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 20px;	/* Firefox用 */
+        float: left;
+        margin-right: 10px;
+    }
+
+    .temps input.material_name  {
+        float: left;
+        margin-right: 10px;
+        width: 218px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border: 1px solid #D3C3B4;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+    .temps input.material_quantity {
+        float: left;
+        margin-right: 10px;
+        width: 218px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border: 1px solid #D3C3B4;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+
+    .temps input.recipe_step {
+        float: left;
+        margin-right: 10px;
+        width: 467px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border: 1px solid #D3C3B4;
+        padding: 10px;
+    }
+    .temps .add {
+        width: auto;
+        height: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        background: #630;
+        color: #FFFFFF;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        height: 37px;
+        float: left;
+        margin-right: 5px;
+    }
+    .temps .del {
+        width: auto;
+        height: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        background: #630;
+        color: #FFFFFF;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        height: 37px;
+        float: left;
+    }
+    .temps #del_input input{
+    }
+    #contribution_btn {
+        width: 100px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+
+
+
+    /* サイドコンテンツ ================================ */
+
+    .temps #side_contents {
+    width: 300px;
+    overflow: hidden;
+    float: right;
+    }
+
+
+    .temps input[type="submit"] {
+        background: #630;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        border: none;
+        color: #FFFFFF;
+        float: right;
+        cursor: pointer;
+        width: 110px;
+        margin-top: 20px;
+    }
+    .temps button {
+        background: #666;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        border: none;
+        color: #FFFFFF;
+        float: right;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    .temps #storage {
+        width: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .temps #storage ul {
+        width: 300px;
+        overflow: hidden;
+    }
+    .temps #storage ul li {
+        float: left;
+        margin-right: 10px;
+    }
+    .temps #storage ul li  button {
+        border-radius: 5px;        /* CSS3草案 */  
+        -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 5px;   /* Firefox用 */  
+    }
+    .temps #storage ul li#here {
+        margin-right: 0;
+    }
+    .temps #storage ul li#here button {
+        background: #CC6600;
+    }
+}

@@ -1,0 +1,35 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+
+    <div id="page_body">
+        <div id="main_contents_registration">
+            <div id="login_form">
+                <p id="instruction">ご入力のメールアドレスにユーザー登録用のURLを送信します</p>
+                    <% @user.errors.full_messages.each do |message| %>
+                    <p><%= message %></p>
+                <% end %>
+
+                <%= form_tag(users_path, method: :post, multipart: true) do %>
+                    <div id="input_username">
+                        <input name="name" value="<%= @user.name %>" placeholder="ユーザー名">
+                        </div>
+                        <div id="input_email">
+                            <input name="email" value="<%= @user.email %>" placeholder="メールアドレス">
+                        </div>
+                        <div id="input_password">
+                            <input name="password" type="password" value="<%= @user.password %>" placeholder="パスワード">
+                        </div>
+                        <div id="input_submit">
+                            <input type="submit" value="新規登録">
+                        </div>
+                        <p id="terms">
+                            <%= link_to("/terms", { :target => "_blank"}) do %>
+                                <i class="fas fa-shield-alt">レシピクリップ利用規約</i>
+                            <% end %>
+                        </p>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

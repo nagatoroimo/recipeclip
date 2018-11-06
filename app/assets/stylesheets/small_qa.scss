@@ -1,0 +1,47 @@
+@media screen and (max-width:480px) {
+
+    #wrapper {
+        background: #FFFFFF;
+        overflow: hidden;
+    }
+    .qa #main_contents_qa p.question_title {
+        background: #F7EEE7;
+        color: #630;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+    .qa #main_contents_qa {
+        overflow: hidden;
+        float: left;
+        background: #FFFFFF !important;
+        border-radius: 5px;        /* CSS3草案 */  
+        -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 5px;   /* Firefox用 */
+    }
+    .qa #main_contents_qa .answer {
+        margin: 20px;
+    }
+    .qa #main_contents_qa ul#blog_service {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .qa #main_contents_qa ul#blog_service li {
+        border: 1px solid #CCCCCC;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 3px;        /* CSS3草案 */  
+        -webkit-border-radius: 3px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 3px;   /* Firefox用 */
+    }
+    .qa #main_contents_qa ul#blog_service li a {
+        display: block;
+    }
+
+    .qa #main_contents_qa .answer img {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

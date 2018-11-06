@@ -1,0 +1,5075 @@
+@charset "UTF-8";
+/* reset ================================ */
+/* line 3, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 7, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+img {
+  vertical-align: top;
+  border: none;
+}
+
+/* 共通レイアウト ================================ */
+/* line 13, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+body {
+  font-size: 12px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  background: #F7EEE7;
+}
+
+/* line 21, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 27, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+a {
+  text-decoration: none;
+  color: #403C36;
+  font-size: 12px;
+  outline: none;
+}
+
+/* line 33, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 36, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+input {
+  outline: none;
+}
+
+/* line 39, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#flash {
+  background: #D7893B;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #FFFFFF;
+}
+
+/* ヘッダー ================================ */
+/* line 48, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+header {
+  width: 100%;
+  height: 60px;
+  border-top: 5px solid #630;
+  /*position: fixed;
+  top: 0;
+  left: 0;*/
+  /* box-shadow: 0px 1px 3px rgba(0,0,0,.2); */
+  background: #FFFFFF;
+}
+
+/* line 58, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#header_info {
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 64, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#header_logo {
+  width: 160px;
+  overflow: hidden;
+  padding-top: 15px;
+  float: left;
+  margin-left: 20px;
+}
+
+/* line 71, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#header_logo a {
+  display: block;
+  background: url(/assets/logo-bd2695f16ce35bb3b08503b473c0ecc8b952d42c45618147733e7a0e44360459.png) no-repeat;
+  background-size: 156px 30px;
+  width: 160px;
+  height: 45px;
+}
+
+/* line 78, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#header_menu {
+  float: right;
+  height: 60px;
+  position: relative;
+  z-index: 999999;
+}
+
+/* line 84, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#bell ul {
+  display: none;
+  z-index: 999;
+  margin-top: -5px;
+}
+
+/* line 89, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#bell ul li {
+  margin: 0;
+}
+
+/* line 92, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#bell:hover {
+  cursor: pointer;
+}
+
+/* line 95, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#bell:hover ul {
+  display: block;
+  position: absolute;
+  top: 65px;
+  right: 0px;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+}
+
+/* line 103, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#bell:hover ul li {
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid #CCCCCC;
+  text-align: left;
+}
+
+/* line 109, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#bell li:hover ul li a {
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 117, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+i.fas.fa-bell {
+  font-size: 20px;
+  position: absolute;
+  top: 19px;
+  right: 22px;
+}
+
+/* line 123, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+span#like_count {
+  background: #CC0000;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: #FFFFFF;
+  border-radius: 12px;
+  /* CSS3草案 */
+  -webkit-border-radius: 12px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 12px;
+  /* Firefox用 */
+  width: 22px;
+  height: 22px;
+}
+
+/* line 136, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+p#bell_count {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* line 141, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#notified {
+  position: absolute;
+  right: 80px;
+  top: 0px;
+  width: 350px;
+}
+
+/* line 147, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#notified #bell {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  float: right;
+}
+
+/* line 154, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+.notified_list {
+  width: 350px;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  /* CSS3草案 */
+  -webkit-border-radius: 3px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 3px;
+  /* Firefox用 */
+}
+
+/* line 165, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#notified ul li {
+  width: 350px;
+  line-height: 50px;
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px dotted #CCCCCC !important;
+}
+
+/* line 173, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#notified ul li a {
+  display: block;
+  width: 100%;
+  padding: 0px !important;
+  font-weight: bold;
+}
+
+/* line 179, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#notified ul li a#bookmark {
+  color: #57B3A1;
+}
+
+/* line 182, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#notified ul li a#clip {
+  color: #630;
+}
+
+/* line 185, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#notified ul li a#like {
+  color: #FF7575;
+}
+
+/* line 188, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+　
+　.notified_list::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: 100px;
+  top: -10px;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #CCCCCC;
+  border-left: 10px solid transparent;
+}
+
+/* beforeで本体の三角を表現 */
+/* line 203, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+.notified_list::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: 20px;
+  top: -10px;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #CCCCCC;
+  border-left: 10px solid transparent;
+}
+
+/* line 215, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#user_menu {
+  z-index: 9999999;
+  line-height: 60px;
+  display: block;
+  margin-right: 30px;
+}
+
+/* line 221, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#user_menu:hover {
+  cursor: pointer;
+}
+
+/* line 224, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#user_menu ul {
+  display: none;
+  z-index: 999;
+  margin-top: -5px;
+}
+
+/* line 229, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#user_menu:hover ul {
+  display: block;
+  width: 125px;
+  position: absolute;
+  top: 65px;
+  right: 10px;
+  padding: 10px;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+}
+
+/* line 239, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#user_menu:hover ul li {
+  float: none;
+  display: list-item;
+  border-bottom: 1px dotted #CCCCCC;
+  text-align: left;
+  line-height: 15px;
+  padding: 10px;
+}
+
+/* line 247, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#user_menu:hover ul li a {
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 255, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#user_menu ul li a {
+  display: block;
+  width: 100%;
+  padding: 0px !important;
+}
+
+/* line 261, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+　
+　#user_menu ul::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: 20px;
+  top: -10px;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #CCCCCC;
+  border-left: 10px solid transparent;
+}
+
+/* beforeで本体の三角を表現 */
+/* line 276, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#user_menu ul::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: 20px;
+  top: -10px;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #CCCCCC;
+  border-left: 10px solid transparent;
+}
+
+/* line 290, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+ul.notified_list i.fas.fa-paperclip, i.fas.fa-bookmark, i.fas.fa-heart {
+  float: left;
+  display: block;
+  font-size: 16px;
+  margin: 0px 10px 0px 20px;
+  line-height: 50px;
+}
+
+/* line 297, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+i.fas.fa-paperclip {
+  color: #630;
+}
+
+/* line 300, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+i.fas.fa-bookmark {
+  padding-left: 2px;
+  color: #57B3A1;
+}
+
+/* line 304, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+i.fas.fa-heart {
+  color: #FF7575;
+}
+
+/* line 308, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#search {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+}
+
+/* line 313, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+p.search_title {
+  float: left;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-top: 8px;
+  font-size: 14px;
+}
+
+/* line 320, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#search #search_category {
+  float: left;
+}
+
+/* line 323, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#search #search_category select {
+  width: 200px;
+  height: auto;
+  border: 1px solid #CCCCCC;
+  padding: 10px !important;
+  float: left;
+  margin: 0;
+  -webkit-border-radius: 0;
+}
+
+/* line 332, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#search #search_cooking_time {
+  float: left;
+}
+
+/* line 335, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#search #search_cooking_time select {
+  width: 200px;
+  height: auto;
+  border: 1px solid #CCCCCC;
+  padding: 10px !important;
+  float: left;
+  margin: 0;
+  -webkit-border-radius: 0;
+}
+
+/* line 344, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#search #search_window {
+  float: left;
+}
+
+/* line 347, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#search #search_window input {
+  width: 200px;
+  height: auto;
+  border: 1px solid #CCCCCC;
+  padding: 10px !important;
+  float: left;
+  margin: 0;
+  -webkit-border-radius: 0;
+}
+
+/* line 356, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#search #search_btn {
+  float: left;
+}
+
+/* line 359, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#search #search_btn input {
+  background: #999;
+  border: none;
+  padding: 10px;
+  color: #FFFFFF;
+  cursor: pointer;
+  width: 100px;
+  height: 37px !important;
+  float: none;
+  margin: 0;
+  padding: 0;
+  -webkit-border-radius: 0;
+  margin-left: 20px;
+}
+
+/* line 374, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+.message_icon {
+  float: left;
+  text-indent: 1em;
+}
+
+/* line 378, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+fas fa-paperclip {
+  font-size: 20px;
+}
+
+/* line 381, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+.fas.fa-utensils {
+  /*font-size: 20px;*/
+}
+
+/* line 384, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+.fas.fa-thumbs-up {
+  font-size: 20px;
+}
+
+/* line 389, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+ul#sub_nav li {
+  float: left;
+  display: inline;
+  line-height: 60px;
+  padding-right: 10px;
+}
+
+/* footer */
+/* line 397, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+footer {
+  width: 100%;
+  background: #FFFFFF;
+}
+
+/* line 401, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#footer_logo {
+  width: 200px;
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+/* line 406, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#footer_logo a {
+  display: block;
+  background: url(/assets/logo-bd2695f16ce35bb3b08503b473c0ecc8b952d42c45618147733e7a0e44360459.png) no-repeat;
+  background-size: 156px 30px;
+  width: 200px;
+  height: 30px;
+}
+
+/* line 413, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#app_download {
+  width: 200px;
+  overflow: hidden;
+  float: left;
+}
+
+/* line 418, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#app_download ul li {
+  margin-bottom: 10px;
+}
+
+/* line 422, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#site_map {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+/* line 428, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+.footer_contents_list {
+  float: left;
+  width: 200px;
+  height: 100px;
+  border-left: 1px solid #CCCCCC;
+  padding-left: 20px;
+}
+
+/* line 435, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+.footer_contents_title {
+  color: #630;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+/* line 440, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+.footer_contents_list ul li {
+  margin-bottom: 10px;
+}
+
+/* line 443, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/base.scss */
+#copy {
+  background: #630;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #FFFFFF;
+}
+@charset "UTF-8";
+/* line 1, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+body.blogs {
+  background: #F7EEE7;
+}
+
+/* line 4, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #page_body {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 11, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #visual {
+  width: 100%;
+  height: 300px;
+}
+
+/* line 15, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #visual p img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* line 20, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #profile_content {
+  width: 100%;
+  height: 80px;
+  background: #f8f8f8;
+}
+
+/* line 25, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #profile {
+  width: 1000px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+/* line 30, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #contributor {
+  max-width: 550px;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-left: 10px;
+  float: left;
+}
+
+/* line 37, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs p#user_img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-top: -40px;
+  z-index: 999999;
+  position: relative;
+}
+
+/* line 47, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.users #follow_user_list ul li {
+  width: 310px;
+  height: 310px;
+  background: #FFFFFF;
+  margin-right: 20px;
+}
+
+/* line 53, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs p#user_img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 2px solid #FFFFFF;
+  float: left;
+}
+
+/* line 61, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs p#user_name {
+  font-weight: bold;
+}
+
+/* line 64, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs p#user_name a {
+  font-size: 16px;
+}
+
+/* line 67, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #count {
+  width: auto;
+  overflow: hidden;
+  float: right;
+  margin-top: 10px;
+}
+
+/* line 73, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #count ul {
+  border-left: 1px dotted #CCCCCC;
+  width: auto;
+  overflow: hidden;
+}
+
+/* line 78, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #count ul li {
+  float: left;
+  display: inline;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-right: 1px dotted #CCCCCC;
+}
+
+/* line 88, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #count ul li a {
+  display: block;
+}
+
+/* line 91, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs span.count {
+  font-size: 16px;
+  font-weight: bold;
+  color: #630;
+}
+
+/* line 97, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #main_contents_show {
+  width: 680px !important;
+  overflow: hidden;
+  margin-right: 20px !important;
+  float: left;
+}
+
+/* line 103, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #main_contents_show table {
+  width: 600px;
+  overflow: hidden;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+/* line 108, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #main_contents_show table th {
+  width: 30%;
+}
+
+/* line 111, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #main_contents_show table td {
+  width: 70%;
+}
+
+/* line 114, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #blog_profile {
+  width: 600px !important;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 40px !important;
+  float: left;
+  background: #FFFFFF !important;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 125, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #blog_article {
+  width: 600px !important;
+  overflow: hidden;
+  margin-right: 20px !important;
+  padding: 40px !important;
+  float: left;
+  background: #FFFFFF !important;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 136, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #blog_article ul li {
+  margin-bottom: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #CCCCCC;
+}
+
+/* line 143, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.article_thumbnail {
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 149, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.article_thumbnail img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+/* line 155, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #side_contents_show {
+  width: 300px;
+  overflow: hidden;
+  float: right;
+}
+
+/* line 161, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #side_contents {
+  width: 300px;
+  overflow: hidden;
+  float: right;
+  background: #FFFFFF;
+}
+
+/* line 167, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #side_contents_show #ranking_banner {
+  width: 220px;
+  overflow: hidden;
+  padding: 40px;
+  background: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+/* line 174, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #side_contents_show #blog_menu {
+  width: 220px;
+  overflow: hidden;
+  background: #FFFFFF;
+  padding: 40px;
+}
+
+/* line 182, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #side_contents_show #blog_menu ul li {
+  border-bottom: 1px dotted #CCCCCC;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 187, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #side_contents_show #blog_menu ul li a {
+  display: block;
+}
+
+/* line 190, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #side_contents_show #blog_menu ul li#here {
+  margin-bottom: 0px;
+}
+
+/* line 196, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #blog_registration_form {
+  width: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #ecdfd6;
+  border: 1px solid #D3C3B4;
+  padding: 30px;
+}
+
+/* line 204, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs input {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  border: 1px solid #D3C3B4;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+/* line 216, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #input_blog_title {
+  width: 342px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 222, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #input_blog_url {
+  width: 342px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 227, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #input_rss_url {
+  width: 342px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 232, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #input_blog_description {
+  width: 342px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* line 238, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #input_blog_description textarea {
+  border: 1px solid #D3C3B4;
+  resize: none;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+}
+
+/* line 246, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #input_submit {
+  width: 120px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 251, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs input[type="submit"] {
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  text-align: center;
+  float: none;
+  background: #630;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+/* line 264, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #banner_tag textarea {
+  border: 1px solid #D3C3B4;
+  resize: none;
+  width: 198px;
+  height: 140px;
+  padding: 10px;
+  display: block;
+}
+
+/* line 272, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #banner_tag p#supplement {
+  width: 200px;
+  padding: 10px;
+  background: #D3C3B4;
+}
+
+/* line 277, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs p.banner_img {
+  margin-bottom: 10px;
+}
+
+/* line 280, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs p#description {
+  margin-bottom: 30px;
+}
+
+/* line 284, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs p.title {
+  /* color: #630; */
+  color: #333333;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* sponsor ==================== */
+/* line 295, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/blogs.scss */
+.blogs #sponsor {
+  width: 300px;
+  height: 250px;
+  background: #000000;
+  float: right;
+}
+@charset "UTF-8";
+/* カテゴリーページCSS */
+/* line 8, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories p.title {
+  color: #630;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* line 14, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #page_body {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 21, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #main_contents_category {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 !important;
+  background: none !important;
+}
+
+/* line 28, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #main_contents_category h2 {
+  margin-bottom: 20px;
+}
+
+/* line 32, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #main_contents_category #category_recipe_list {
+  width: 600px;
+  overflow: hidden;
+  float: left;
+  background: #FFFFFF;
+  padding: 40px;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 42, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #main_contents_category #category_recipe_list ul {
+  width: 600px;
+  overflow: hidden;
+}
+
+/* line 46, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #main_contents_category #category_recipe_list ul li {
+  width: 190px;
+  float: left;
+  display: inline;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+/* line 53, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #main_contents_category #category_recipe_list ul li#recipe_3,
+.categories #main_contents_category #category_recipe_list ul li#recipe_6,
+.categories #main_contents_category #category_recipe_list ul li#recipe_9,
+.categories #main_contents_category #category_recipe_list ul li#recipe_12,
+.categories #main_contents_category #category_recipe_list ul li#recipe_15,
+.categories #main_contents_category #category_recipe_list ul li#recipe_18 {
+  margin-right: 0px;
+}
+
+/* line 62, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #main_contents_category #category_recipe_list .recipe_img {
+  width: 190px;
+  height: 190px;
+  background: #000000;
+  margin-bottom: 10px;
+}
+
+/* line 68, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #main_contents_category #category_recipe_list .recipe_img img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* line 74, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #main_contents_category .category_type {
+  margin-bottom: 40px;
+}
+
+/* line 77, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #main_contents_category .category_type .recipe_img {
+  width: 100px;
+  height: 100px;
+  background: #000000;
+}
+
+/* line 82, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #main_contents_category .category_type .recipe_img img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* line 88, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #side_contents {
+  float: right;
+}
+
+/* line 91, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/categories.scss */
+.categories #side_contents #sponsor {
+  width: 300px;
+  height: 260px;
+  background: #000000;
+  margin-bottom: 20px;
+}
+@charset "UTF-8";
+/*　コンテンツ ===============================*/
+/* line 8, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 30px;
+}
+
+/* line 13, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #terms_main_contents {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+/* line 19, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #about_main_contents {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+/* line 25, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home .section {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/* line 31, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home p.title {
+  color: #630;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* line 37, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home i.fas.fa-heart {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* line 42, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home i.fas.fa-star {
+  color: #FEC254;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+/* line 47, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home i.fas.fa-flag {
+  color: #46800D;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+/* line 52, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home i.fas.fa-th-list {
+  color: #333333;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+/* line 57, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home i.fas.fa-tag {
+  color: #666666;
+  margin-right: 5px;
+}
+
+/* line 61, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home i.fas.fa-crown {
+  margin-right: 5px;
+}
+
+/* line 64, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #crown_num_1 {
+  color: #B8860B;
+}
+
+/* line 67, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #crown_num_2 {
+  color: #696969;
+}
+
+/* line 71, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home p.sub_title {
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* line 77, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home p.title a {
+  font-size: 14px;
+  color: #630;
+}
+
+/* line 83, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #about_contents ul li {
+  width: 260px;
+  overflow: hidden;
+  padding: 20px;
+  float: left;
+  display: inline;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background: #FFFFFF;
+}
+
+/* line 93, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #about_contents ul li.here {
+  margin-right: 0px;
+}
+
+/* line 96, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #about_contents ul li .sub_title {
+  text-align: center;
+  border-bottom: 1px solid #F7EEE7;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+/* line 102, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #about_contents ul li p.about_img {
+  background: #000000;
+  width: 260px;
+  height: 160px;
+  margin-bottom: 20px;
+}
+
+/* line 108, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #about_contents ul li p.about_img img {
+  width: 260px;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* line 113, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #catch {
+  width: 1000px;
+  height: 160px;
+  margin: 0 auto;
+  background: url(/assets/top_visual_bg-b2dc9705202f25c0738bbcdf87d8acf8b703c96f6f4995e161e4aaba260d5be4.gif) no-repeat;
+  background-position: 10px;
+}
+
+/* line 120, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #catch h1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/* line 125, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #catch h1 img {
+  width: 240px;
+}
+
+/* line 128, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home p#description {
+  text-align: center;
+}
+
+/* line 132, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #topix {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* line 139, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #topix ul {
+  width: 1000px;
+  overflow: hidden;
+}
+
+/* line 143, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #topix ul li {
+  float: left;
+  display: inline;
+  width: 320px;
+  overflow: hidden;
+  margin-right: 20px;
+  position: relative;
+}
+
+/* line 151, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #topix ul li#pr_3 {
+  margin-right: 0px;
+}
+
+/* line 154, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home .recipe_img {
+  width: 320px;
+  height: 320px;
+  background: #000000;
+}
+
+/* line 159, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home .recipe_img img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* line 164, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home .user_img {
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+}
+
+/* line 169, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home .user_img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  border: 2px solid #F7EEE7;
+  object-fit: cover;
+}
+
+/* line 176, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #topix .recipe_details {
+  margin-top: 10px;
+}
+
+/* line 179, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home p.recipe_title a {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* line 184, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #home_contents {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+
+/* line 190, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #home_contents #home_contents_body {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+/* line 196, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #home_contents #home_contents_body #main_contents {
+  width: 660px;
+  overflow: hidden;
+  float: left;
+  margin-right: 40px;
+}
+
+/* line 202, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #home_contents #home_contents_body #side_contents {
+  width: 300px;
+  overflow: hidden;
+  float: right;
+}
+
+/* category ==================== */
+/* line 210, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #category {
+  width: 660px;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 60px;
+}
+
+/* line 217, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #category ul {
+  overflow: hidden;
+  margin-bottom: 40px;
+  width: 660px;
+  margin: 0 auto;
+}
+
+/* line 223, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #category ul li {
+  overflow: hidden;
+  float: left;
+  display: inline;
+}
+
+/* line 228, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+p.category_title {
+  font-weight: bold;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  /* CSS3草案 */
+  -webkit-border-radius: 3px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 3px;
+  /* Firefox用 */
+}
+
+/* line 235, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+p.category_title i.fas.fa-tag {
+  float: left;
+  line-height: 20px;
+}
+
+/* line 239, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #category ul li {
+  margin-right: 10px;
+}
+
+/* line 242, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #category ul li a {
+  overflow: hidden;
+  padding: 10px 15px 10px 15px;
+  display: block;
+}
+
+/* line 247, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #category ul li a:hover {
+  background: #E6E6E6;
+}
+
+/* popular_recipe ==================== */
+/* line 254, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #popular_recipe {
+  width: 660px;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 60px;
+}
+
+/* line 260, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #popular_recipe ul {
+  overflow: hidden;
+  float: right;
+}
+
+/* line 264, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #popular_recipe ul li {
+  float: left;
+  display: inline;
+  width: 210px;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+/* line 272, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #popular_recipe ul li.here {
+  margin-right: 0px !important;
+}
+
+/* line 275, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #popular_recipe ul li img {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+}
+
+/* line 280, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #popular_recipe ul li#popular_recipe_3,
+.home #popular_recipe ul li#popular_recipe_6 {
+  margin-right: 0px;
+}
+
+/* line 284, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #popular_recipe ul li .recipe_details {
+  margin: 0 !important;
+  padding: 10px 0px 10px 0px;
+  width: auto;
+  overflow: hidden;
+}
+
+/* line 290, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #popular_recipe ul li .recipe_details p.recipe_title {
+  width: 100%;
+}
+
+/* line 293, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #popular_recipe ul li .recipe_details p.recipe_title a {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+/* line 298, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+ul.popular_recipe_icon {
+  width: auto !important;
+}
+
+/* line 301, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+ul.popular_recipe_icon li {
+  display: inline;
+  float: left;
+  width: auto !important;
+  height: auto !important;
+  margin-bottom: 0px !important;
+  margin-right: 10px !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* line 311, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+ul.popular_recipe_icon li i.fas.fa-eye,
+ul.popular_recipe_icon li i.fas.fa-heart,
+ul.popular_recipe_icon li i.fas.fa-comment {
+  margin: 0;
+  padding: 0;
+  float: none;
+  font-size: 10px;
+  color: #f2c5a2 !important;
+  line-height: 2;
+}
+
+/* new_recipe ==================== */
+/* line 323, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #new_recipe {
+  width: 660px;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 60px;
+}
+
+/* line 329, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #new_recipe ul li {
+  float: left;
+  display: inline;
+  margin-right: 12px;
+  width: 100px;
+}
+
+/* line 335, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #new_recipe ul li .recipe_thumbnail {
+  margin-bottom: 5px;
+}
+
+/* line 338, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #new_recipe ul li#new_recipe_6 {
+  margin-right: 0px;
+}
+
+/* line 341, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #new_recipe .recipe_thumbnail {
+  width: 100px;
+  height: 100px;
+}
+
+/* line 345, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #new_recipe .recipe_thumbnail img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* blog_ranking */
+/* line 353, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #blog_ranking {
+  width: 300px;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 40px;
+}
+
+/* line 359, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #blog_ranking ul {
+  width: 300px;
+  overflow: hidden;
+}
+
+/* line 363, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #blog_ranking ul li {
+  width: 300px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #CCCCCC;
+}
+
+/* line 370, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #blog_ranking ul li p.blog_title {
+  overflow: hidden;
+}
+
+/* new_blog_article */
+/* line 377, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #article_new {
+  width: 300px;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 40px;
+}
+
+/* line 383, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #article_new ul {
+  width: 300px;
+  overflow: hidden;
+}
+
+/* line 387, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #article_new ul li {
+  width: 300px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #CCCCCC;
+}
+
+/* line 395, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #article_new ul li .article_thumbnail {
+  width: 70px;
+  height: 70px;
+  float: left;
+}
+
+/* line 400, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #article_new ul li .article_thumbnail img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+/* line 405, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #article_new ul li .article_title {
+  overflow: hidden;
+}
+
+/* notice ==================== */
+/* line 411, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #notice {
+  width: 660px;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 60px;
+}
+
+/* line 417, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #notice_topic {
+  width: 660px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+/* line 422, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #notice dl {
+  width: 660px;
+  overflow: hidden;
+}
+
+/* line 426, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #notice dl dt {
+  float: left;
+  margin-bottom: 10px;
+}
+
+/* line 430, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #notice dl dd {
+  display: block;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #CCCCCC;
+}
+
+/* line 436, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home span.time {
+  margin-right: 10px;
+}
+
+/* line 439, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home p#notice_list_link {
+  background: #630;
+  border: none;
+  float: right;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 450, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home p#notice_list_link a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: block;
+  color: #FFFFFF;
+}
+
+/* sponsor ==================== */
+/* line 461, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #sponsor {
+  width: 300px;
+  height: 250px;
+  background: #000000;
+  float: right;
+  margin-bottom: 20px;
+}
+
+/* line 468, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #bottom_sponsor ul {
+  width: 620px;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 80px;
+}
+
+/* line 474, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #bottom_sponsor ul li {
+  width: 300px;
+  height: 250px;
+  background: #000000;
+  float: left;
+  display: inline;
+  margin-right: 20px;
+}
+
+/* line 482, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/home.scss */
+.home #bottom_sponsor ul li#here {
+  margin-right: 0px;
+}
+@charset "UTF-8";
+/* line 5, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices #wrapper {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 10, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices #page_body {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 17, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices p.title {
+  /* color: #630; */
+  color: #630;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+/* line 25, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices #main_contents_index {
+  width: 600px !important;
+  overflow: hidden;
+  margin-right: 20px !important;
+  padding: 40px !important;
+  float: left;
+  background: #FFFFFF !important;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 36, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices #side_contents {
+  width: 260px;
+  overflow: hidden;
+  float: right;
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 46, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices #side_contents_common {
+  width: 300px;
+  overflow: hidden;
+  float: right;
+}
+
+/* line 51, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices #side_contents_common #sponsor {
+  width: 300px;
+  height: 260px;
+  background: #000000;
+}
+
+/* line 56, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices #notice_list {
+  width: 600px;
+  overflow: hidden;
+  padding: 0px !important;
+}
+
+/* line 61, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices #notice_list ul {
+  width: 600px;
+  overflow: hidden;
+}
+
+/* line 65, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices #notice_list ul li {
+  width: 600px;
+  overflow: hidden;
+  border-bottom: 1px dotted #D3C3B4;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 72, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices .fas.fa-check-square {
+  margin-right: 5px;
+}
+
+/* line 75, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices p.sub_title {
+  /* color: #630; */
+  color: #333333;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* line 82, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices .section {
+  width: 600px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+/* line 87, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+p#registration_btn {
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background: #630;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+/* line 98, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+p#registration_btn a {
+  color: #FFFFFF;
+  display: block;
+  line-height: 50px;
+}
+
+/* line 103, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+p#agreement {
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* line 108, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+i.fas.fa-exclamation-circle {
+  float: left;
+  color: #630;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-right: 10px;
+}
+
+/* line 115, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices #notice_title input {
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  width: 578px;
+  border: 1px solid #D3C3B4;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 124, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices #notice_content textarea {
+  border: 1px solid #D3C3B4;
+  resize: none;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  width: 578px;
+  height: 600px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 135, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices input[type="submit"] {
+  background: #630;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: none;
+  color: #FFFFFF;
+  float: right;
+  cursor: pointer;
+  width: 180px;
+  margin-top: 20px;
+}
+
+/* line 148, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/notices.scss */
+.notices #contribution_btn {
+  width: 180px;
+}
+@charset "UTF-8";
+/* line 5, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/password_resets.scss */
+.password_resets #main_contents_reset {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 !important;
+  background: none !important;
+  margin-top: 40px;
+}
+
+/* line 13, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/password_resets.scss */
+.password_resets #reset_form {
+  width: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #ecdfd6;
+  border: 1px solid #D3C3B4;
+  padding: 30px;
+}
+
+/* line 21, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/password_resets.scss */
+.password_resets #error_message {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #D7893B;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* line 28, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/password_resets.scss */
+.password_resets p#instruction {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* line 32, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/password_resets.scss */
+.password_resets input {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 260px;
+  height: 40px;
+  border-radius: 25px;
+  /* CSS3草案 */
+  -webkit-border-radius: 25px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 25px;
+  /* Firefox用 */
+  border: 1px solid #D3C3B4;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+/* line 45, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/password_resets.scss */
+.password_resets #input_email {
+  width: 302px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 50, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/password_resets.scss */
+.password_resets #password_reset_input_submit {
+  width: 260px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 55, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/password_resets.scss */
+.password_resets #password_reset_input_submit input[type="submit"] {
+  width: 260px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  text-align: center;
+  float: none;
+  background: #630;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+/* line 69, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/password_resets.scss */
+.password_resets #password_reset_form {
+  width: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #ecdfd6;
+  border: 1px solid #D3C3B4;
+  padding: 30px;
+}
+
+/* line 77, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/password_resets.scss */
+.password_resets .input_password {
+  width: 312px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+@charset "UTF-8";
+/* line 4, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+body.posts {
+  background: #F7EEE7;
+}
+
+/* line 7, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #catch {
+  margin-bottom: 40px;
+}
+
+/* line 10, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #page_body {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 18, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .error_message {
+  background: #FF6347;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #FFFFFF;
+  margin-top: 5px;
+  clear: both;
+  position: relative;
+  background-color: #FF6347;
+  border: 2px solid #FF6347;
+  border-radius: 3px;
+  /* CSS3草案 */
+  -webkit-border-radius: 3px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 3px;
+  /* Firefox用 */
+}
+
+/* beforeで枠線の三角を表現 */
+/* line 35, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .error_message::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: 20px;
+  top: -10px;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FF6347;
+  border-left: 10px solid transparent;
+}
+
+/* beforeで本体の三角を表現 */
+/* line 49, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .error_message::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: 20px;
+  top: -12px;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FF6347;
+  border-left: 10px solid transparent;
+}
+
+/* line 61, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts input[type="file"] {
+  border: none;
+}
+
+/* line 64, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #file_01,
+.posts #mask_file_01 {
+  display: none;
+}
+
+/* line 68, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .image_file_exist {
+  height: 400px !important;
+}
+
+/* line 71, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .image_file_exist span {
+  display: block;
+  background: none !important;
+  width: 600px;
+  height: 400px !important;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* line 79, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .image_file_exist span img {
+  width: 100%;
+  height: 400px !important;
+  object-fit: cover;
+}
+
+/* line 84, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #file_btn {
+  margin-bottom: 20px;
+}
+
+/* line 87, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #file_mask span {
+  display: block;
+  background: url(/assets/input_file-a38008219fcc927a108e5c8d8b004e5ff6777e32932b4fdd9c3f3373fa43bd94.jpg);
+  background-position: center;
+  width: 600px;
+  height: 200px;
+  cursor: pointer;
+}
+
+/* line 95, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #main_contents_edit #file_mask {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+/* line 101, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #main_contents_edit #file_mask span img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* line 106, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #main_contents_edit #file_mask span {
+  display: block;
+  background: url();
+  background-position: center;
+  width: 600px;
+  height: 400px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* line 115, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+#main_contents_index ul li {
+  width: 180px;
+  overflow: hidden;
+  float: left;
+  display: inline;
+  margin-right: 20px;
+}
+
+/* line 122, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+#main_contents_index .recipe_thumbnail img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* line 127, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+#main_contents_index .recipe_title {
+  margin-top: 10px;
+}
+
+/* line 130, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+#main_contents_index ul li#recipe_new_5,
+#main_contents_index ul li#recipe_new_10,
+#main_contents_index ul li#recipe_new_15 {
+  margin-right: 0px;
+}
+
+/* line 137, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_title input {
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  width: 578px;
+  border: 1px solid #D3C3B4;
+  padding: 10px;
+}
+
+/* line 145, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts p.title {
+  /* color: #630; */
+  color: #333333;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* line 152, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts p.sub_title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* line 157, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_comment {
+  margin-top: 20px;
+}
+
+/* line 160, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_comment textarea {
+  border: 1px solid #D3C3B4;
+  resize: none;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  width: 578px;
+  height: 78px;
+  padding: 10px;
+  display: block;
+}
+
+/* line 172, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_category {
+  margin-top: 20px;
+  width: 180px;
+  overflow: hidden;
+  float: left;
+}
+
+/* line 179, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_category select {
+  border: 1px solid #D3C3B4;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  padding: 10px;
+  width: 180px;
+}
+
+/* line 187, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #cooking_time {
+  margin-top: 20px;
+  width: 180px;
+  overflow: hidden;
+  float: left;
+  margin-right: 30px;
+}
+
+/* line 194, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #cooking_time select {
+  border: 1px solid #D3C3B4;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  padding: 10px;
+  width: 180px;
+}
+
+/* line 202, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #number_persons {
+  margin-top: 20px;
+  width: 180px;
+  overflow: hidden;
+  float: left;
+  margin-right: 30px;
+}
+
+/* line 209, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #number_persons select {
+  border: 1px solid #D3C3B4;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  padding: 10px;
+  width: 180px;
+}
+
+/* line 218, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts p.case {
+  margin-left: 20px;
+  float: left;
+}
+
+/* line 223, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_ranking {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+/* line 229, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_ranking ul li {
+  float: left;
+  display: inline;
+  width: 300px;
+  overflow: hidden;
+  margin-right: 40px;
+  color: #FFFFFF;
+  position: relative;
+}
+
+/* line 238, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_ranking ul li#recipe_ranking_3 {
+  margin-right: 0px;
+}
+
+/* line 241, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .like-btn {
+  color: #8899a6;
+  padding: 10px;
+  border: 1px solid #E6E6E6;
+}
+
+/* line 246, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .like-btn:hover {
+  background: #FF7575;
+  color: #FFFFFF;
+}
+
+/* line 250, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #share {
+  margin-bottom: 20px;
+}
+
+/* line 253, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #share .fa-paperclip {
+  background: #FF7575;
+  padding: 10px;
+  border: 1px solid #FF7575;
+  color: #FFFFFF;
+}
+
+/* line 261, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .recipe_img {
+  width: 300px;
+  height: 300px;
+  background: #000000;
+}
+
+/* line 266, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .recipe_img img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* line 272, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .user_date {
+  width: 300px;
+  overflow: hidden;
+}
+
+/* line 276, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .user_img {
+  position: absolute;
+  bottom: 25px;
+  left: 10px;
+}
+
+/* line 281, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .user_img img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50px;
+  border: 2px solid #F7EEE7;
+}
+
+/* line 288, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .user_name {
+  float: right;
+}
+
+/* line 291, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #main_contents {
+  width: 600px !important;
+  overflow: hidden;
+  margin-right: 20px !important;
+  padding: 40px !important;
+  float: left;
+  background: #FFFFFF !important;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 302, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #main_contents_new {
+  width: 600px !important;
+  overflow: hidden;
+  margin-right: 20px !important;
+  padding: 40px !important;
+  float: left;
+  background: #FFFFFF !important;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 313, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #main_contents_index {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 !important;
+  background: none !important;
+}
+
+/* line 320, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #main_contents_edit {
+  width: 600px !important;
+  overflow: hidden;
+  margin-right: 20px !important;
+  padding: 40px !important;
+  float: left;
+  background: #FFFFFF !important;
+}
+
+/* line 330, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #contribution_contents {
+  width: 600px;
+  overflow: hidden;
+  margin-right: 20px;
+  padding: 40px;
+  float: left;
+  background: #FFFFFF;
+  margin-top: 20px;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 342, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #contribution_contents textarea {
+  border: 1px solid #D3C3B4;
+  resize: none;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  width: 578px;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/* line 353, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #contribtion {
+  border-bottom: 1px dotted #E6E6E6;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  width: auto;
+  overflow: hidden;
+}
+
+/* line 361, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts p.contribution_user_img {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-top: 0px;
+  margin-right: 10px;
+}
+
+/* line 368, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts p.contribution_user_img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  object-fit: cover;
+  float: left;
+}
+
+/* line 377, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts p.comment {
+  float: left;
+  width: 500px;
+}
+
+/* line 381, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts p.guide_link {
+  float: right;
+}
+
+/* line 384, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts p.contribution_btn {
+  width: 200px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 392, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts p.contribution_btn a {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #630;
+  display: block;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* line 402, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .section {
+  width: 600px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: #FFFFFF;
+}
+
+/* サイドコンテンツ ================================ */
+/* line 411, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents {
+  width: 300px;
+  overflow: hidden;
+  float: right;
+}
+
+/* line 416, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #contributor {
+  overflow: hidden;
+  display: table;
+}
+
+/* line 420, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #contributor #contributor_info {
+  width: 260px;
+  overflow: hidden;
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  margin-bottom: 20px;
+}
+
+/* line 430, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #contributor p#user_img {
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-top: 0px;
+  margin-right: 20px;
+}
+
+/* line 437, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #contributor p#user_name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* line 441, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #contributor p#user_name a {
+  font-size: 14px;
+}
+
+/* line 444, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #contributor_sub_menu ul {
+  float: left;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 450, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #contributor_sub_menu ul li {
+  float: left;
+  display: inline;
+  margin-right: 10px;
+}
+
+/* line 455, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #contributor_sub_menu ul li a {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #666666;
+  color: #FFFFFF;
+  border-radius: 3px;
+  /* CSS3草案 */
+  -webkit-border-radius: 3px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 3px;
+  /* Firefox用 */
+}
+
+/* line 467, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents p#user_img img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  object-fit: cover;
+  float: left;
+}
+
+/* line 475, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #follow {
+  clear: both;
+  margin-top: 20px;
+}
+
+/* line 479, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts p#follow_btn {
+  clear: both;
+  text-align: center;
+  background: #630;
+  border-radius: 3px;
+  /* CSS3草案 */
+  -webkit-border-radius: 3px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 3px;
+  /* Firefox用 */
+}
+
+/* line 487, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts p#follow_btn a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #FFFFFF;
+  display: block;
+}
+
+/* line 493, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #sponsor {
+  width: 300px;
+  height: 250px;
+  background: #000000;
+  margin-bottom: 20px;
+}
+
+/* おすすめレシピ ================================ */
+/* line 502, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #recommend_recipe {
+  width: 260px;
+  overflow: hidden;
+  padding: 20px;
+  background: #FFFFFF;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  /* CSS3草案 */
+  -webkit-border-radius: 3px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 3px;
+  /* Firefox用 */
+}
+
+/* line 512, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #recommend_recipe ul {
+  width: 300px;
+  overflow: hidden;
+}
+
+/* line 516, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #recommend_recipe ul li {
+  width: 120px;
+  overflow: hidden;
+  float: left;
+  display: inline;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 524, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .reccommend_recipe_img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+/* line 529, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .reccommend_recipe_name {
+  height: 45px;
+}
+
+/* line 532, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #recommend_recipe ul li#reccommend_2,
+.posts #side_contents #recommend_recipe ul li#reccommend_4 {
+  margin-right: 0px;
+}
+
+/* line 536, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #recommend_recipe ul li#reccommend_3,
+.posts #side_contents #recommend_recipe ul li#reccommend_4 {
+  margin-bottom: 0px;
+}
+
+/* line 540, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #side_contents #recommend_recipe ul li img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* お知らせ一覧 ================================ */
+/* line 548, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+#notice_list {
+  width: 260px;
+  overflow: hidden;
+  padding: 20px;
+  background: #FFFFFF;
+}
+
+/* line 554, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+#notice_list ul {
+  width: 260px;
+  overflow: hidden;
+}
+
+/* line 558, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+#notice_list ul li {
+  margin-bottom: 10px;
+}
+
+/* メインコンテンツ ================================ */
+/* line 565, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .recipe_image {
+  margin-bottom: 10px;
+}
+
+/* line 568, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .recipe_image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* line 573, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .premise {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* line 578, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .premise ul {
+  float: right;
+}
+
+/* line 581, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .premise ul li {
+  float: left;
+  display: inline;
+  margin-left: 20px;
+}
+
+/* line 586, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+i.fas.fa-utensils {
+  color: #333333;
+  margin-right: 5px;
+}
+
+/* line 590, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts p.number_persons {
+  float: right;
+}
+
+/* line 593, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+i.fas.fa-clock {
+  color: #333333;
+  margin-right: 5px;
+}
+
+/* line 597, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+i.fa.fa-user {
+  color: #333333;
+  margin-right: 5px;
+}
+
+/* line 601, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .recipe_title {
+  clear: both;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* line 608, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_material dl {
+  width: 600px;
+  overflow: hidden;
+}
+
+/* line 612, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_material dl dt {
+  float: left;
+  text-align: left;
+  border-bottom: 1px dotted #E6E6E6;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 619, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_material dl dd {
+  text-align: right;
+  border-bottom: 1px dotted #E6E6E6;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 625, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_material {
+  margin-top: 20px;
+  float: left;
+}
+
+/* line 629, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_material ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 633, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #recipe_material li {
+  float: left;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* line 638, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.material_list {
+  float: left;
+  width: 239px;
+  margin-right: 10px;
+}
+
+/* line 643, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.material_list_here {
+  width: 239px;
+  margin-right: 10px;
+  float: left;
+}
+
+/* line 648, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #cooking_recipe {
+  margin-top: 10px;
+  float: left;
+}
+
+/* line 652, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #cooking_recipe ul li {
+  width: 600px;
+  overflow: hidden;
+  border-bottom: 1px dotted #E6E6E6;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 659, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #main_contents_new #cooking_recipe ul li {
+  border-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+/* line 663, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+span.step_number {
+  background: #630;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: #FFFFFF;
+  border-radius: 20px;
+  /* CSS3草案 */
+  -webkit-border-radius: 20px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 20px;
+  /* Firefox用 */
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 676, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts input.material_name {
+  float: left;
+  margin-right: 10px;
+  width: 218px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid #D3C3B4;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+/* line 687, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts input.material_quantity {
+  float: left;
+  margin-right: 10px;
+  width: 218px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid #D3C3B4;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+/* line 699, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts input.recipe_step {
+  float: left;
+  margin-right: 10px;
+  width: 467px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid #D3C3B4;
+  padding: 10px;
+}
+
+/* line 709, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .add {
+  width: auto;
+  height: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background: #630;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  height: 37px;
+  float: left;
+  margin-right: 5px;
+}
+
+/* line 726, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts .del {
+  width: auto;
+  height: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background: #630;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  height: 37px;
+  float: left;
+}
+
+/* line 747, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts input[type="submit"] {
+  background: #666;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: none;
+  color: #FFFFFF;
+  float: right;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* line 759, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #storage {
+  width: 230px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 764, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #storage ul li {
+  float: left;
+  width: 110px;
+  margin-right: 10px;
+}
+
+/* line 769, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #storage ul li submit {
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 774, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #storage ul li#here {
+  margin-right: 0;
+}
+
+/* line 777, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/posts.scss */
+.posts #storage ul li#here input[type="submit"] {
+  background: #CC6600;
+}
+@charset "UTF-8";
+/* line 1, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/qa.scss */
+body.qa {
+  background: #F7EEE7;
+}
+
+/* line 4, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/qa.scss */
+.qa #page_body {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 12, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/qa.scss */
+.qa #main_contents_qa {
+  width: 600px !important;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 40px !important;
+  float: left;
+  background: #FFFFFF !important;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 26, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/qa.scss */
+.qa .section a {
+  color: #630;
+}
+
+/* line 29, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/qa.scss */
+.qa .section p {
+  margin-bottom: 10px;
+}
+
+/* line 32, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/qa.scss */
+.qa .section .question {
+  margin-bottom: 10px;
+}
+
+/* line 35, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/qa.scss */
+p.question_title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* line 39, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/qa.scss */
+.qa .section .answer ul#blog_service {
+  margin-bottom: 10px;
+}
+
+/* line 42, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/qa.scss */
+.qa .section .answer ul#blog_service li {
+  margin-bottom: 5px;
+}
+
+/* line 46, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/qa.scss */
+.qa .section .answer p.sub_title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/* line 54, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/qa.scss */
+.qa #side_contents {
+  width: 300px;
+  overflow: hidden;
+  float: right;
+  background: #FFFFFF;
+}
+
+/* sponsor ==================== */
+/* line 65, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/qa.scss */
+.qa #sponsor {
+  width: 300px;
+  height: 250px;
+  background: #000000;
+  float: right;
+}
+@charset "UTF-8";
+/*　コンテンツ ===============================*/
+/* line 8, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+#page_body {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 15, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results p.title {
+  color: #630;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* line 21, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results #main_contents_result {
+  width: 600px;
+  overflow: hidden;
+  float: left;
+  padding: 40px;
+  background: #FFFFFF;
+}
+
+/* line 30, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results #main_contents_result #search_recipe_list {
+  width: 600px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 36, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results #main_contents_result #search_recipe_list ul li {
+  float: left;
+  display: inline;
+  width: 190px;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+/* line 44, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results #main_contents_result #search_recipe_list ul li#search_3,
+.results #main_contents_result #search_recipe_list ul li#search_6,
+.results #main_contents_result #search_recipe_list ul li#search_9,
+.results #main_contents_result #search_recipe_list ul li#search_12 {
+  margin-right: 0px;
+}
+
+/* line 50, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results #main_contents_result #search_recipe_list .recipe_img {
+  width: 190px;
+  height: 190px;
+  background: #000000;
+  margin-bottom: 10px;
+}
+
+/* line 56, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results #main_contents_result #search_recipe_list .recipe_img img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* line 68, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results #side_contents {
+  width: 300px;
+  overflow: hidden;
+  float: right;
+}
+
+/* line 73, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results #side_contents #sponsor {
+  width: 300px;
+  height: 250px;
+  background: #000000;
+  margin-bottom: 20px;
+}
+
+/* line 82, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results #popular_keyword {
+  width: 260px;
+  overflow: hidden;
+  background: #FFFFFF;
+  padding: 20px;
+}
+
+/* line 88, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results p.sub_title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* line 93, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results #popular_keyword ul li {
+  float: left;
+  display: inline;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 101, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results #popular_keyword ul li.keyword a {
+  border: 1px solid #CCCCCC;
+  background: #F8F8F8;
+  padding: 4px 8px 4px 8px;
+  display: block;
+  font-size: 11px;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 111, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/results.scss */
+.results #popular_keyword ul li.keyword a:hover {
+  background: #E6E6E6;
+}
+/* line 1, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/small_base.scss */
+header {
+  width: 100%;
+  height: 60px;
+  border-top: 5px solid #630;
+  background: #FFFFFF;
+}
+@charset "UTF-8";
+/*　コンテンツ ===============================*/
+/* line 3, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/small_home.scss */
+.home #wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+@charset "UTF-8";
+/* line 5, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+body.users {
+  background: #F7EEE7;
+}
+
+/* line 8, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #page_body {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 15, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps .error_message {
+  background: #FF6347;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #FFFFFF;
+  margin-top: 5px;
+  clear: both;
+  position: relative;
+  background-color: #FF6347;
+  border: 2px solid #FF6347;
+  border-radius: 3px;
+  /* CSS3草案 */
+  -webkit-border-radius: 3px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 3px;
+  /* Firefox用 */
+}
+
+/* beforeで枠線の三角を表現 */
+/* line 32, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps .error_message::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: 20px;
+  top: -10px;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FF6347;
+  border-left: 10px solid transparent;
+}
+
+/* beforeで本体の三角を表現 */
+/* line 46, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.tempss .error_message::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: 20px;
+  top: -12px;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FF6347;
+  border-left: 10px solid transparent;
+}
+
+/* line 60, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #visual {
+  width: 100%;
+  height: 300px;
+}
+
+/* line 64, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #visual p img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* line 69, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #profile_content {
+  width: 100%;
+  height: 80px;
+  background: #f8f8f8;
+}
+
+/* line 74, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #profile {
+  width: 1000px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+/* line 79, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #contributor {
+  max-width: 550px;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-left: 10px;
+  float: left;
+}
+
+/* line 86, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps p#user_img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-top: -40px;
+  z-index: 999999;
+  position: relative;
+}
+
+/* line 98, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #follow_user_list ul li {
+  width: 310px;
+  height: 310px;
+  background: #FFFFFF;
+  margin-right: 20px;
+}
+
+/* line 104, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps p#user_img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 2px solid #FFFFFF;
+  float: left;
+}
+
+/* line 112, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps p#user_name {
+  font-weight: bold;
+}
+
+/* line 115, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps p#user_name a {
+  font-size: 16px;
+}
+
+/* line 119, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps .head_visual {
+  width: 310px;
+  height: 100px;
+  background: #000000;
+}
+
+/* line 124, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps .head_visual img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* line 129, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps .follow_user_profile {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+/* line 135, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps p.follow_user_img {
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-top: -40px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 100px;
+  left: 15px;
+}
+
+/* line 145, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps p.follow_user_img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 2px solid #FFFFFF;
+  float: left;
+}
+
+/* line 153, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps p.follow_user_name {
+  clear: both;
+}
+
+/* line 159, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #follower_user_list {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* line 165, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #follower_user_list ul li {
+  width: 260px;
+  height: 80px;
+  background: #FFFFFF;
+  margin-right: 20px;
+  padding: 20px;
+  float: left;
+  display: inline;
+}
+
+/* line 174, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps .follower_user_img {
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 180, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps .follower_user_img img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+  float: left;
+}
+
+/* line 190, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #count {
+  width: auto;
+  overflow: hidden;
+  float: right;
+  margin-top: 10px;
+}
+
+/* line 196, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #count ul {
+  border-left: 1px dotted #CCCCCC;
+  width: auto;
+  overflow: hidden;
+}
+
+/* line 201, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #count ul li {
+  float: left;
+  display: inline;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-right: 1px dotted #CCCCCC;
+}
+
+/* line 211, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #count ul li a {
+  display: block;
+}
+
+/* line 214, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps span.count {
+  font-size: 16px;
+  font-weight: bold;
+  color: #630;
+}
+
+/* line 220, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* line 226, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps p.title {
+  /* color: #630; */
+  color: #333333;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* line 235, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_show #temp_recipes ul {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 240, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_show #temp_recipes ul li#temp_3,
+.temps #main_contents_show #temp_recipes ul li#temp_6,
+.temps #main_contents_show #temp_recipes ul li#temp_9 {
+  margin-right: 0px;
+}
+
+/* line 245, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_show #temp_recipes ul li.recipe_list {
+  width: 310px;
+  height: 310px;
+  background: #FFFFFF;
+  float: left;
+  display: inline;
+  margin-right: 35px;
+  margin-bottom: 35px;
+}
+
+/* line 254, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_show #temp_recipes p.recipe_img {
+  width: 310px;
+  height: 200px;
+}
+
+/* line 258, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_show #temp_recipes .recipe_img img {
+  width: 310px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* line 264, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_temp {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 !important;
+  background: none !important;
+}
+
+/* line 271, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_temp .recipe_details {
+  padding: 20px;
+}
+
+/* line 274, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_temp .recipe_details p.user_img {
+  clear: both;
+}
+
+/* line 277, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_temp .recipe_details p.user_name {
+  float: none;
+}
+
+/* line 280, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps p.recipe_title {
+  clear: both;
+  font-weight: bold;
+}
+
+/* line 284, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps p.recipe_title a {
+  font-size: 16px;
+}
+
+/* 一時保存レシピ一覧 */
+/* line 294, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_edit {
+  width: 600px !important;
+  overflow: hidden;
+  margin-right: 20px !important;
+  padding: 40px !important;
+  float: left;
+  background: #FFFFFF !important;
+}
+
+/* line 304, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #temp_recipes {
+  float: left;
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* line 311, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #temp_recipes ul li {
+  width: 310px;
+  height: 310px;
+  background: #FFFFFF;
+  margin-right: 20px;
+  position: relative;
+  float: left;
+  display: inline;
+  margin-bottom: 20px;
+}
+
+/* line 322, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps .recipe_img {
+  width: 310px;
+  height: 200px;
+  background: #000000;
+}
+
+/* line 327, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps .recipe_img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* line 333, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps p.contributor_user_img {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 160px;
+  left: 15px;
+}
+
+/* line 340, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps p.contributor_user_img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 2px solid #FFFFFF;
+  float: left;
+}
+
+/*  */
+/* line 353, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #file_btn {
+  margin-bottom: 20px;
+}
+
+/* line 356, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #file_btn img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* line 361, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps input[type="file"] {
+  border: none;
+}
+
+/* line 364, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #file_01,
+.temps #mask_file_01 {
+  display: none;
+}
+
+/* line 368, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_edit .image_file_exist {
+  height: 400px !important;
+}
+
+/* line 371, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_edit .image_file_exist span {
+  display: block;
+  background: none !important;
+  width: 600px;
+  height: 400px !important;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* line 379, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_edit .image_file_exist span img {
+  height: 400px !important;
+}
+
+/* line 382, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_edit #file_mask span {
+  display: block;
+  background: url(/assets/input_file-a38008219fcc927a108e5c8d8b004e5ff6777e32932b4fdd9c3f3373fa43bd94.jpg);
+  background-position: center;
+  width: 600px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* line 392, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_edit #recipe_image {
+  width: 600px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* line 397, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #main_contents_edit #recipe_image img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* line 405, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps input[type="submit"] {
+  background: #630;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: none;
+  color: #FFFFFF;
+  float: right;
+  cursor: pointer;
+  width: 100px;
+  margin-top: 20px;
+}
+
+/* line 418, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #recipe_title input {
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  width: 578px;
+  border: 1px solid #D3C3B4;
+  padding: 10px;
+}
+
+/* line 427, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps p.sub_title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* line 432, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #recipe_comment {
+  margin-top: 20px;
+}
+
+/* line 435, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #recipe_comment textarea {
+  border: 1px solid #D3C3B4;
+  resize: none;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  width: 578px;
+  height: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 10px;
+  display: block;
+}
+
+/* line 448, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #recipe_category {
+  margin-top: 20px;
+  width: 180px;
+  overflow: hidden;
+  float: left;
+}
+
+/* line 455, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #recipe_category select {
+  border: 1px solid #D3C3B4;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  padding: 10px;
+  width: 180px;
+}
+
+/* line 463, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #cooking_time {
+  margin-top: 20px;
+  width: 180px;
+  overflow: hidden;
+  float: left;
+  margin-right: 30px;
+}
+
+/* line 470, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #cooking_time select {
+  border: 1px solid #D3C3B4;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  padding: 10px;
+  width: 180px;
+}
+
+/* line 478, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #number_persons {
+  margin-top: 20px;
+  width: 180px;
+  overflow: hidden;
+  float: left;
+  margin-right: 30px;
+}
+
+/* line 485, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #number_persons select {
+  border: 1px solid #D3C3B4;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  padding: 10px;
+  width: 180px;
+}
+
+/* line 497, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #recipe_material dl {
+  width: 600px;
+  overflow: hidden;
+}
+
+/* line 501, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #recipe_material dl dt {
+  float: left;
+  text-align: left;
+  border-bottom: 1px dotted #E6E6E6;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 508, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #recipe_material dl dd {
+  text-align: right;
+  border-bottom: 1px dotted #E6E6E6;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 514, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #recipe_material {
+  margin-top: 20px;
+  float: left;
+}
+
+/* line 518, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #recipe_material ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 522, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #recipe_material li {
+  float: left;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* line 527, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.material_list {
+  float: left;
+  width: 239px;
+  margin-right: 10px;
+}
+
+/* line 532, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.material_list_here {
+  width: 239px;
+  margin-right: 10px;
+  float: left;
+}
+
+/* line 538, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #cooking_recipe {
+  margin-top: 10px;
+  float: left;
+}
+
+/* line 542, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #cooking_recipe ul li {
+  width: 600px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* line 547, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+span.step_number {
+  background: #630;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: #FFFFFF;
+  border-radius: 20px;
+  /* CSS3草案 */
+  -webkit-border-radius: 20px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 20px;
+  /* Firefox用 */
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 561, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps input.material_name {
+  float: left;
+  margin-right: 10px;
+  width: 218px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid #D3C3B4;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+/* line 572, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps input.material_quantity {
+  float: left;
+  margin-right: 10px;
+  width: 218px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid #D3C3B4;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+/* line 584, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps input.recipe_step {
+  float: left;
+  margin-right: 10px;
+  width: 467px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid #D3C3B4;
+  padding: 10px;
+}
+
+/* line 594, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps .add {
+  width: auto;
+  height: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background: #630;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  height: 37px;
+  float: left;
+  margin-right: 5px;
+}
+
+/* line 611, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps .del {
+  width: auto;
+  height: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background: #630;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  height: 37px;
+  float: left;
+}
+
+/* line 629, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+#contribution_btn {
+  width: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* サイドコンテンツ ================================ */
+/* line 640, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #side_contents {
+  width: 300px;
+  overflow: hidden;
+  float: right;
+}
+
+/* line 647, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps input[type="submit"] {
+  background: #630;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: none;
+  color: #FFFFFF;
+  float: right;
+  cursor: pointer;
+  width: 110px;
+  margin-top: 20px;
+}
+
+/* line 660, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps button {
+  background: #666;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: none;
+  color: #FFFFFF;
+  float: right;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* line 672, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #storage {
+  width: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 677, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #storage ul {
+  width: 300px;
+  overflow: hidden;
+}
+
+/* line 681, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #storage ul li {
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 685, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #storage ul li button {
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 690, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #storage ul li#here {
+  margin-right: 0;
+}
+
+/* line 693, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/temps.scss */
+.temps #storage ul li#here button {
+  background: #CC6600;
+}
+@charset "UTF-8";
+/* line 5, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+body.users {
+  background: #F7EEE7;
+}
+
+/* line 8, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #page_body {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 15, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #visual {
+  width: 100%;
+  height: 300px;
+}
+
+/* line 19, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #visual p img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* line 24, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #profile_content {
+  width: 100%;
+  height: 80px;
+  background: #f8f8f8;
+}
+
+/* line 29, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #profile {
+  width: 1000px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+/* line 34, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #contributor {
+  max-width: 550px;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-left: 10px;
+  float: left;
+}
+
+/* line 41, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p#user_img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-top: -40px;
+  z-index: 999999;
+  position: relative;
+}
+
+/* line 53, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #follow_user_list ul li {
+  width: 310px;
+  height: 310px;
+  background: #FFFFFF;
+  margin-right: 20px;
+}
+
+/* line 59, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p#user_img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 2px solid #FFFFFF;
+  float: left;
+}
+
+/* line 67, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p#user_name {
+  font-weight: bold;
+}
+
+/* line 70, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p#user_name a {
+  font-size: 16px;
+}
+
+/* line 74, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users .head_visual {
+  width: 310px;
+  height: 100px;
+  background: #000000;
+}
+
+/* line 79, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users .head_visual img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* line 84, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users .follow_user_profile {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+/* line 90, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p.follow_user_img {
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-top: -40px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 100px;
+  left: 15px;
+}
+
+/* line 100, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p.follow_user_img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 2px solid #FFFFFF;
+  float: left;
+}
+
+/* line 108, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p.follow_user_name {
+  clear: both;
+}
+
+/* line 114, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #follower_user_list {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* line 120, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #follower_user_list ul li {
+  width: 260px;
+  height: 80px;
+  background: #FFFFFF;
+  margin-right: 20px;
+  padding: 20px;
+  float: left;
+  display: inline;
+}
+
+/* line 129, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users .follower_user_img {
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 135, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users .follower_user_img img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+  float: left;
+}
+
+/* line 145, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #count {
+  width: auto;
+  overflow: hidden;
+  float: right;
+  margin-top: 10px;
+}
+
+/* line 151, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #count ul {
+  border-left: 1px dotted #CCCCCC;
+  width: auto;
+  overflow: hidden;
+}
+
+/* line 156, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #count ul li {
+  float: left;
+  display: inline;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-right: 1px dotted #CCCCCC;
+}
+
+/* line 166, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #count ul li a {
+  display: block;
+}
+
+/* line 169, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users span.count {
+  font-size: 16px;
+  font-weight: bold;
+  color: #630;
+}
+
+/* line 175, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* line 180, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_login {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 !important;
+  background: none !important;
+}
+
+/* line 187, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_registration {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 !important;
+  background: none !important;
+}
+
+/* line 194, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #user_information_edit {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+/* line 200, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_likes {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 !important;
+  background: none !important;
+}
+
+/* line 207, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_follows {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 !important;
+  background: none !important;
+}
+
+/* line 214, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_followers {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 !important;
+  background: none !important;
+}
+
+/* line 221, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 !important;
+  background: none !important;
+}
+
+/* line 229, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #access_log {
+  width: 1000px;
+  margin-top: 40px;
+}
+
+/* line 234, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #user_information_edit #main_contents {
+  width: 600px;
+  overflow: hidden;
+  padding: 40px;
+  background: #FFFFFF !important;
+}
+
+/* line 240, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #user_information_edit #side_contents {
+  width: 260px;
+  overflow: hidden;
+  float: right;
+  background: #FFFFFF;
+  padding: 20px;
+}
+
+/* line 247, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #user_information_edit .section {
+  width: auto;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* line 253, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #user_information_edit table {
+  border-spacing: 0px 15px;
+}
+
+/* line 256, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #user_information_edit table input {
+  margin: 0;
+}
+
+/* line 259, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #user_information_edit table th {
+  width: 40%;
+  text-align: left;
+  color: #630;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* line 266, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #user_information_edit table td {
+  width: 60%;
+}
+
+/* line 269, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #user_information_edit p.title {
+  /* color: #630; */
+  color: #333333;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-align: center;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+/* line 283, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users ul#sex_check li {
+  float: left;
+  display: inline;
+  margin-right: 10px;
+}
+
+/* line 288, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users input.check_input {
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+}
+
+/* line 293, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users input.image_update_input {
+  width: auto !important;
+  height: auto !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* line 300, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #error_message {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #D7893B;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* line 307, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users input {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  border: 1px solid #D3C3B4;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+/* line 319, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #input_username {
+  width: 342px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 325, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #input_email {
+  width: 342px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 331, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #input_password {
+  width: 342px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 337, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #input_sex input {
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+/* line 342, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #input_user_img input {
+  border: none;
+}
+
+/* line 345, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #input_cover input {
+  border: none;
+}
+
+/* line 348, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #user_information_edit textarea {
+  border: 1px solid #D3C3B4 !important;
+  width: 320px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+}
+
+/* line 358, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #input_submit {
+  width: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 363, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users input[type="submit"] {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  text-align: center;
+  float: none;
+  background: #630;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+/* line 376, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users .input_title {
+  float: left;
+  width: 30%;
+}
+
+/* line 381, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #terms {
+  text-align: center;
+}
+
+/* line 385, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #login_form {
+  width: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #ecdfd6;
+  border: 1px solid #D3C3B4;
+  padding: 30px;
+}
+
+/* line 393, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #login_form #instruction {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* line 399, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p#signup {
+  text-align: center;
+}
+
+/* line 402, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p#password_forget {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* line 407, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p.title {
+  /* color: #630; */
+  color: #333333;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* line 414, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #posted_recipes {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* line 421, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #posted_recipes p.title {
+  color: #630;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* line 428, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show #posted_recipes ul {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 433, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show #posted_recipes ul li#posts_3,
+.users #main_contents_show #posted_recipes ul li#posts_6,
+.users #main_contents_show #posted_recipes ul li#posts_9 {
+  margin-right: 0px;
+}
+
+/* line 438, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show #posted_recipes ul li.recipe_list {
+  width: 310px;
+  height: 310px;
+  background: #FFFFFF;
+  float: left;
+  display: inline;
+  margin-right: 35px;
+  margin-bottom: 35px;
+}
+
+/* line 447, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show #posted_recipes p.recipe_img {
+  width: 310px;
+  height: 200px;
+}
+
+/* line 451, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show #posted_recipes .recipe_img img {
+  width: 310px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* line 457, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show .recipe_details {
+  padding: 20px;
+}
+
+/* line 460, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show .recipe_details p.user_img {
+  clear: both;
+}
+
+/* line 463, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show .recipe_details p.user_name {
+  float: none;
+}
+
+/* line 466, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p.recipe_title {
+  clear: both;
+  font-weight: bold;
+}
+
+/* line 470, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p.recipe_title a {
+  font-size: 16px;
+}
+
+/* line 480, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show #temp_recipes ul {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 485, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show #temp_recipes ul li#temp_3,
+.users #main_contents_show #temp_recipes ul li#temp_6,
+.users #main_contents_show #temp_recipes ul li#temp_9 {
+  margin-right: 0px;
+}
+
+/* line 490, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show #temp_recipes ul li.recipe_list {
+  width: 310px;
+  height: 310px;
+  background: #FFFFFF;
+  float: left;
+  display: inline;
+  margin-right: 35px;
+  margin-bottom: 35px;
+}
+
+/* line 499, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show #temp_recipes p.recipe_img {
+  width: 310px;
+  height: 200px;
+}
+
+/* line 503, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #main_contents_show #temp_recipes .recipe_img img {
+  width: 310px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* お気に入りレシピ一覧ページ */
+/* line 513, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #liked_recipes {
+  float: left;
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* line 520, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #liked_recipes ul li {
+  width: 310px;
+  height: 310px;
+  background: #FFFFFF;
+  margin-right: 20px;
+  position: relative;
+  float: left;
+  display: inline;
+  margin-bottom: 20px;
+}
+
+/* line 531, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users .recipe_img {
+  width: 310px;
+  height: 200px;
+  background: #000000;
+}
+
+/* line 536, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users .recipe_img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* line 542, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p.contributor_user_img {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 160px;
+  left: 15px;
+}
+
+/* line 549, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p.contributor_user_img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 2px solid #FFFFFF;
+  float: left;
+}
+
+/* line 558, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users .like_recipe_detail {
+  padding: 20px;
+}
+
+/* line 561, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users .like_recipe_detail p.recipe_title a {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* サイドコンテンツ */
+/* line 568, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #side_contents {
+  width: 260px;
+  overflow: hidden;
+  float: right;
+  background: #FFFFFF;
+  padding: 20px;
+}
+
+/* line 575, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users #edition {
+  clear: both;
+  margin-top: 20px;
+}
+
+/* line 580, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p#edit_btn {
+  clear: both;
+  text-align: center;
+  background: #630;
+  border-radius: 3px;
+  /* CSS3草案 */
+  -webkit-border-radius: 3px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 3px;
+  /* Firefox用 */
+}
+
+/* line 588, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p#edit_btn a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #FFFFFF;
+  display: block;
+}
+
+/* line 594, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/users.scss */
+.users p#delet_btn {
+  margin-top: 10px;
+  text-align: center;
+}
+/* line 6, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+table {
+  border-top: 1px solid #CCCCCC;
+  border-left: 1px solid #CCCCCC;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 12, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+table th, td {
+  padding: 10px;
+  border-right: 1px solid #CCCCCC;
+  border-bottom: 1px dotted #CCCCCC;
+}
+
+/* line 17, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+table th {
+  background: #F8F8F8;
+}
+
+/* line 20, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+table th#rank {
+  width: 30px;
+}
+
+/* line 23, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+table th#user {
+  width: 60px;
+}
+
+/* line 28, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+table th.point {
+  width: 60px;
+}
+
+/* line 31, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking {
+  overflow: hidden;
+  background: #FFFFFF;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* line 37, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking p.title {
+  color: #630;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* line 43, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes table td.rank {
+  width: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* line 48, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking .rank i.fas.fa-crown {
+  font-size: 18px;
+}
+
+/* line 51, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking .rank p.rank {
+  clear: left;
+}
+
+/* line 54, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking .rank p#rank_1 {
+  color: #B8860B;
+}
+
+/* line 57, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking .rank p#rank_2 {
+  color: #696969;
+}
+
+/* line 60, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking .rank p#rank_3 {
+  color: #8B4513;
+}
+
+/* line 63, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking .rank p#rank_4,
+.votes #main_contents_ranking .rank p#rank_5,
+.votes #main_contents_ranking .rank p#rank_6,
+.votes #main_contents_ranking .rank p#rank_7,
+.votes #main_contents_ranking .rank p#rank_8,
+.votes #main_contents_ranking .rank p#rank_9,
+.votes #main_contents_ranking .rank p#rank_10 {
+  display: none;
+}
+
+/* line 73, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking td.user_thumbnail {
+  width: 50px;
+}
+
+/* line 76, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking td.user_thumbnail img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+/* line 81, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking table td.blog_content {
+  width: 920px;
+  overflow: hidden;
+  float: left;
+  border-bottom: 1px dotted #CCCCCC;
+  border-left: 0px !important;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+/* line 90, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking p.blog_title {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+/* line 94, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking p.blog_title a {
+  color: #630;
+  font-size: 16px !important;
+  font-weight: bold;
+}
+
+/* line 99, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking p.blog_description {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+/* line 103, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking table {
+  border-bottom: 1px solid #CCCCCC;
+}
+
+/* line 106, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking table td.blog_details {
+  overflow: hidden;
+}
+
+/* line 109, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking table td.blog_details .article_content {
+  overflow: hidden;
+}
+
+/* line 112, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking table td.blog_details .article_content p.article_title {
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 118, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking table td.blog_details ul.new_article li {
+  float: left;
+  display: inline;
+  border-right: 1px solid #CCCCCC;
+  padding-right: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+/* line 126, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking table td.blog_details ul.new_article li a {
+  color: #630;
+}
+
+/* line 130, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking table td.in_point {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+/* line 135, C:/Users/satoshi/Desktop/recipe/app/assets/stylesheets/votes.scss */
+.votes #main_contents_ranking table td.out_point {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+ 

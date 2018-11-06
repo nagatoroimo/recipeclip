@@ -1,0 +1,19 @@
+<div id="wrapper">
+    <div id="page_body">
+        <div id="main_contents_edit">
+            <%= form_tag("/cooktime/update") do %>
+                <ul>
+                    <% @cooktime.each do |time| %>
+                        <li>
+                            <input name="time[]" type="text" value="<%= time.time %>">
+                            <input name="id[]" type="hidden" value="<%= time.id %>">
+                        </li>
+                    <% end %>
+                </ul>
+                <div id="submit_button">
+                    <input type="submit" value="更新する">
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

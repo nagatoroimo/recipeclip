@@ -1,0 +1,302 @@
+@media screen and (min-width:1024px) {
+    body.blogs {
+        background: #F7EEE7;
+    }
+    .blogs #page_body {
+        width: 1000px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .blogs #visual {
+        width: 100%;
+        height: 300px;
+    }
+    .blogs #visual p img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    .blogs #profile_content {
+        width: 100%;
+        height: 80px;
+        background: #f8f8f8;
+    }
+    .blogs #profile {
+        width: 1000px;
+        height: 80px;
+        margin: 0 auto;
+    }
+    .blogs #contributor {
+        max-width: 550px;
+        overflow: hidden;
+        padding-top: 10px;
+        padding-left: 10px;
+        float: left;
+    }
+    .blogs p#user_img {
+        width: 100px;
+        height: 100px;
+        float: left;
+        margin-top: -40px;
+        z-index: 999999;
+        position: relative;
+    }
+    .users #follow_user_list {
+    }
+    .users #follow_user_list ul li {
+        width: 310px;
+        height: 310px;
+        background: #FFFFFF;
+        margin-right: 20px;
+    }
+    .blogs p#user_img img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+        border: 2px solid #FFFFFF;
+        float: left;
+    }
+    .blogs p#user_name {
+        font-weight: bold;
+    }
+    .blogs p#user_name a {
+        font-size: 16px;
+    }
+    .blogs #count {
+        width: auto;
+        overflow: hidden;
+        float: right;
+        margin-top: 10px;
+    }
+    .blogs #count ul{
+        border-left: 1px dotted #CCCCCC;
+        width: auto;
+        overflow: hidden;
+    }
+    .blogs #count ul li {
+        float: left;
+        display: inline;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        border-right: 1px dotted #CCCCCC;
+    }
+    .blogs #count ul li a {
+        display: block;
+    }
+    .blogs span.count {
+        font-size: 16px;
+        font-weight: bold;
+        color: #630;
+    }
+
+    .blogs #main_contents_show {
+        width: 680px !important;
+        overflow: hidden;
+        margin-right: 20px !important;
+        float: left;
+    }
+    .blogs #main_contents_show table {
+        width: 600px;
+        overflow: hidden;
+        border-bottom: 1px solid #CCCCCC;
+    }
+    .blogs #main_contents_show table th {
+        width: 30%;
+    }
+    .blogs #main_contents_show table td {
+        width: 70%;
+    }
+    .blogs #blog_profile {
+        width: 600px !important;
+        overflow: hidden;
+        margin-bottom: 20px;
+        padding: 40px !important;
+        float: left;
+        background: #FFFFFF !important;
+        border-radius: 5px;        /* CSS3草案 */  
+        -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 5px;   /* Firefox用 */
+    }
+    .blogs #blog_article {
+        width: 600px !important;
+        overflow: hidden;
+        margin-right: 20px !important;
+        padding: 40px !important;
+        float: left;
+        background: #FFFFFF !important;
+        border-radius: 5px;        /* CSS3草案 */  
+        -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 5px;   /* Firefox用 */
+    }
+    .blogs #blog_article ul li {
+        margin-bottom: 10px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px dotted #CCCCCC;
+    }
+    .article_thumbnail {
+        width: 80px;
+        height: 80px;
+        float: left;
+        margin-right: 20px;
+    }
+    .article_thumbnail img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+    }
+
+    .blogs #side_contents_show {
+        width: 300px;
+        overflow: hidden;
+        float: right;
+    }
+
+    .blogs #side_contents {
+        width: 300px;
+        overflow: hidden;
+        float: right;
+        background: #FFFFFF;
+    }
+    .blogs #side_contents_show #ranking_banner {
+        width: 220px;
+        overflow: hidden;
+        padding: 40px;
+        background: #FFFFFF;
+        margin-bottom: 20px;
+    }
+    .blogs #side_contents_show #blog_menu {
+        width: 220px;
+        overflow: hidden;
+        background: #FFFFFF;
+        padding: 40px;
+    }
+    .blogs #side_contents_show #blog_menu ul {
+    }
+    .blogs #side_contents_show #blog_menu ul li {
+        border-bottom: 1px dotted #CCCCCC;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    .blogs #side_contents_show #blog_menu ul li a {
+        display: block;
+    }
+    .blogs #side_contents_show #blog_menu ul li#here {
+        margin-bottom: 0px;
+    }
+
+
+
+    .blogs #blog_registration_form {
+        width: 500px;
+        overflow: hidden;
+        margin: 0 auto;
+        background:#ecdfd6;
+        border: 1px solid #D3C3B4;
+        padding: 30px;
+    }
+    .blogs input {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 300px;
+        height: 40px;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        border: 1px solid #D3C3B4;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .blogs #input_blog_title {
+        width: 342px;
+        overflow: hidden;
+        margin: 0 auto;    
+    }
+
+    .blogs #input_blog_url {
+        width: 342px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .blogs #input_rss_url {
+        width: 342px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .blogs #input_blog_description {
+        width: 342px;
+        overflow: hidden;
+        margin: 0 auto; 
+        margin-bottom: 20px;
+    }
+    .blogs #input_blog_description textarea {
+        border: 1px solid #D3C3B4;
+        resize: none;
+        width: 300px;
+        height: 100px;
+        padding: 20px;
+    }
+
+    .blogs #input_submit {
+        width: 120px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .blogs input[type="submit"] {
+        width: 120px;
+        border: none;
+        border-radius: 5px;        /* CSS3草案 */  
+        -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 5px;   /* Firefox用 */ 
+        text-align: center;
+        float: none;
+        background: #630;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .blogs #banner_tag textarea {
+        border: 1px solid #D3C3B4;
+        resize: none;
+        width: 198px;
+        height: 140px;
+        padding: 10px;
+        display: block;
+    }
+    .blogs #banner_tag p#supplement {
+        width: 200px;
+        padding: 10px;
+        background: #D3C3B4;
+    }
+    .blogs p.banner_img {
+        margin-bottom: 10px;
+    }
+    .blogs p#description {
+        margin-bottom: 30px;
+    }
+
+    .blogs p.title {
+        /* color: #630; */
+        color: #333333;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+
+    /* sponsor ==================== */
+
+    .blogs #sponsor {
+        width: 300px;
+        height: 250px;
+        background: #000000;
+        float: right;
+    }
+}

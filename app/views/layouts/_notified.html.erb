@@ -1,0 +1,20 @@
+<% if @count >= 1 %>
+        <ul class="notified_list">
+        <% if @like_count >= 1 %>
+            <% @like_read.each do |read| %>
+                <li><i class="fas fa-paperclip"></i><%= link_to @like_message, "/notifications/#{read.post_id}/#{read.user_id}/like_through", :id => "clip" %></li>
+            <% end %>
+        <% end %>
+        <% if @temp_count >= 1 %>
+            <% @temp_read.each do |read| %>
+                <li><i class="fas fa-bookmark"></i><%= link_to @temp_message, "/notifications/#{read.id}/temp_through", :id => "bookmark" %></li>
+            <% end %>
+        <% end %>
+        <% if @follow_count >= 1 %>
+            <% @follow_read.each do |read| %>
+                <% @user = User.find_by(id: read.user_id) %>
+                <li><i class="fas fa-heart"></i><%= link_to "#{@user.name}さんに#{@follow_message}", "/notifications/#{read.id}/follow_through", :id => "like" %></li>
+            <% end %>
+        <% end %>
+        </ul>
+<% end %>

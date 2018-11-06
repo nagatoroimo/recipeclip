@@ -1,0 +1,111 @@
+@media screen and (min-width:1024px) {
+/*　コンテンツ ===============================*/
+
+#page_body {
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.results p.title {
+    color: #630;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.results #main_contents_result {
+    width: 600px;
+    overflow: hidden;
+    float: left;
+    padding: 40px;
+    background: #FFFFFF;
+}
+
+
+.results #main_contents_result #search_recipe_list {
+    width: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.results #main_contents_result #search_recipe_list ul li {
+    float: left;
+    display: inline;
+    width: 190px;
+    overflow: hidden;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+.results #main_contents_result #search_recipe_list ul li#search_3,
+.results #main_contents_result #search_recipe_list ul li#search_6,
+.results #main_contents_result #search_recipe_list ul li#search_9,
+.results #main_contents_result #search_recipe_list ul li#search_12 {
+    margin-right: 0px;
+}
+.results #main_contents_result #search_recipe_list .recipe_img {
+    width: 190px;
+    height: 190px;
+    background: #000000;
+    margin-bottom: 10px;
+}
+.results #main_contents_result #search_recipe_list .recipe_img img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+.results #side_contents {
+    width: 300px;
+    overflow: hidden;
+    float: right;
+}
+.results #side_contents #sponsor {
+    width: 300px;
+    height: 250px;
+    background: #000000;
+    margin-bottom: 20px;
+}
+
+
+
+.results #popular_keyword {
+    width: 260px;
+    overflow: hidden;
+    background: #FFFFFF;
+    padding: 20px;
+}
+.results p.sub_title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.results #popular_keyword ul li {
+    float: left;
+    display: inline;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.results #popular_keyword ul li.keyword {
+}
+.results #popular_keyword ul li.keyword a {
+    border: 1px solid #CCCCCC;
+    background: #F8F8F8;
+    padding: 4px 8px 4px 8px;
+    display: block;
+    font-size: 11px;
+	border-radius: 5px;		/* CSS3草案 */
+	-webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 5px;	/* Firefox用 */
+}
+.results #popular_keyword ul li.keyword a:hover {
+    background: #E6E6E6;
+}
+
+}

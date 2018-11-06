@@ -1,0 +1,33 @@
+<div id="wrapper">
+    <div id="page_body">
+        <div id="blog_registration_form">
+            <% @blog.errors.full_messages.each do |message| %>
+                <p><%= message %></p>
+            <% end %>
+
+            <%= form_tag(blogs_path, method: :post) do %>
+                <div id="input_blog_title">
+                    <p class="title">ブログタイトル</p>
+                    <input name="blog_title" placeholder="ブログタイトル">
+                </div>
+                <div id="input_blog_url">
+                    <p class="title">ブログURL</p>
+                    <input name="blog_url" placeholder="ブログURL">
+                </div>
+                <div id="input_rss_url">
+                    <p class="title">RSS URL</p>
+                    <input name="rss_url" placeholder="RSS URL">
+                </div>
+                <div id="input_blog_description">
+                    <p class="title">ブログの紹介文</p>
+                    <textarea name="blog_description"></textarea>
+                </div>
+                <div id="input_submit">
+                    <input type="submit" value="登録する">
+                </div>
+            <% end %>
+
+            <p><%= link_to "よくある質問", "/blogs/qa", target: "_blank" %>
+        </div>
+    </div>
+</div>

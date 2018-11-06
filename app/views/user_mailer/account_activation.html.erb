@@ -1,0 +1,6 @@
+<p><%= @user.name %>様</p>
+
+<p>RecipeClipにご登録ありがとうございます！</p>
+<p>アカウントを有効にするには、下記の「アカウントを有効化する」をクリックしてください。</p>
+
+<%= link_to "アカウントを有効化する", edit_account_activation_url(@user.activation_token, email:@user.email) %>

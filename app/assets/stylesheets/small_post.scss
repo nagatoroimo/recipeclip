@@ -1,0 +1,541 @@
+
+@media screen and (max-width:480px) {
+
+    .posts #page_body {
+        background: #FFFFFF;
+        padding-bottom: 20px;
+    }
+    .posts #side_contents {
+    }
+    .posts p.title {
+        background: #F7EEE7;
+        color: #630;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    /* notified_list */
+    .posts #notified i.fas.fa-heart {
+        color: #FF7575;
+    }
+    .posts #notified i.fas.fa-paperclip {
+        color: #630;
+    }
+    
+
+    /* 投稿機能 */
+
+    #search_window input {
+        margin: 0 !important;
+    }
+    #search_btn input {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .posts #main_contents_new {
+        overflow: hidden;
+        background: #FFFFFF;
+    }
+
+    .posts #file_mask span{
+        display:block;
+        background: image-url("input_file.jpg");
+        background-position: center;
+        height: 200px;
+        cursor:pointer;
+        margin: 20px;
+    }
+    .posts #main_contents_edit #file_mask {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    .posts #main_contents_edit #file_mask span img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    .posts #main_contents_edit #file_mask span {
+        display:block;
+        background: image-url("");
+        background-position: center;
+        width: 100%;
+        height: 400px;
+        cursor:pointer;
+        margin-bottom: 20px;
+    }
+    .posts #file_01,
+    .posts #mask_file_01 {
+        display: none;
+    }
+
+    .posts #main_contents_new .input_area {
+        overflow: hidden;
+        box-sizing: border-box;
+        margin: 20px;
+    }
+
+    .posts #main_contents_new input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .posts #main_contents_new textarea {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .posts #main_contents_new select {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .posts #main_contents_new #recipe_material ul {
+        margin: 20px;
+    }
+    .posts #main_contents_new #recipe_material ul li {
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    .posts #main_contents_new .material_list {
+        float: left;
+        width: 30%;
+        margin-right: 5px;
+    }
+    .posts #main_contents_new .material_list input {
+        margin: 0;
+        width: 100%
+    }
+    .posts #main_contents_new .material_list_here {
+        float: left;
+        width: 30%;
+        margin-right: 5px;
+    }
+    .posts #main_contents_new .material_list_here input {
+        margin: 0;
+        width: 100%
+    }
+    .posts #main_contents_new input[type=button] {
+        width: auto;
+        padding: 8px 10px 8px 10px;
+        margin: 0;
+    }
+    .posts #main_contents_new #cooking_recipe ul li input {
+        margin: 0 !important;
+    }
+    .posts #main_contents_new #cooking_recipe input {
+        width: auto;
+    }
+
+    
+
+    .posts #main_contents_new .error_message {
+        background: #FF6347;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        color: #FFFFFF;
+        margin-top: 5px;
+        clear: both;
+        position: relative;
+        background-color: #FF6347;
+        border: 2px solid #FF6347;
+        border-radius: 3px;        /* CSS3草案 */  
+        -webkit-border-radius: 3px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 3px;   /* Firefox用 */ 
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    /* beforeで枠線の三角を表現 */
+    .posts #main_contents_new .error_message::before{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      left: 20px;
+      top: -10px;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #FF6347;
+      border-left: 10px solid transparent;
+    }
+    
+    /* beforeで本体の三角を表現 */
+    .posts #main_contents_new .error_message::after{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      left: 20px;
+      top: -12px;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #FF6347;
+      border-left: 10px solid transparent;
+    }
+    .posts #main_contents_new #storage {
+        width: 190px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .posts #main_contents_new #storage ul li {
+        float: left;
+        display: inline;
+    }
+    .posts #main_contents_new #storage ul li input {
+        width: 90px;
+        margin: 0;
+        background: #666;
+        color: #FFFFFF;
+        border-radius: 3px;        /* CSS3草案 */  
+        -webkit-border-radius: 3px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 3px;   /* Firefox用 */
+        border: none;
+    }
+    .posts #main_contents_new #storage ul li#here input {
+        width: 90px;
+        margin: 0;
+        background: #CC6600;
+        color: #FFFFFF;
+        border-radius: 3px;        /* CSS3草案 */  
+        -webkit-border-radius: 3px;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 3px;   /* Firefox用 */
+        border: none;
+    }
+    .posts #main_contents_new #storage ul li {
+        margin-right: 10px;
+    }
+    .posts #main_contents_new #storage ul li#here {
+        margin: 0;
+    }
+
+    /* レシピコンテンツ */
+
+    .posts #share {
+        padding: 10px;
+    }
+    .posts #share a {
+        padding: 10px;
+        display: block;
+        text-align: center;
+        background: #FF7575;
+    	border-radius: 3px;		/* CSS3草案 */
+        -webkit-border-radius: 3px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 3px;	/* Firefox用 */
+        font-size: 14px;
+    }
+
+    .posts #main_contents_show i.fas.fa-paperclip {
+        color: #FFFFFF;
+    }
+    .posts .recipe_image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    .posts .premise {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .posts i.fas.fa-utensils {
+        margin-right: 5px;
+    }
+    .pots i.fas.fa-clock {
+        margin-right: 5px;
+    }
+    .posts i.fa.fa-user {
+        margin-right: 5px;
+    }
+    .posts .premise ul {
+        display: inline-block;
+    }
+    .posts .premise ul li {
+        float: left;
+        display: inline;
+        margin-right: 10px;
+    }
+
+    .posts .recipe_title {
+        clear: both;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .posts .recipe_description {
+        text-align: center;
+        margin: 0px 20px 20px 20px;
+    }
+    .posts .recipe_description p {
+        display: inline-block;
+        text-align: left;
+    }
+
+    /* 材料 */
+    .posts #recipe_material dl {
+        margin: 20px;
+        overflow: hidden;
+    }
+    .posts #recipe_material dl dt {
+        float: left;
+        overflow: hidden;
+    }
+    .posts #recipe_material dl dd {
+        text-align: right;
+    }
+    .posts #recipe_material dl dt,dd {
+        border-bottom: 1px dotted #CCCCCC;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+
+    /* 作り方 */
+    .posts #cooking_recipe ul {
+        margin: 20px;
+        counter-reset: number;
+        line-height: 2;
+    }
+    .posts #cooking_recipe ul li {
+        overflow: hidden;
+        border-bottom: 1px dotted #E6E6E6;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        list-style: decimal;
+    }
+    .posts #cooking_recipe ul li p {
+        display: inline;
+    }
+    .posts #main_contents_show #cooking_recipe ul li:before {
+        counter-increment: number;
+        content: counter(number);
+        background:#630;
+        display: inline;
+        text-align: center;
+        border-radius: 50%;
+        color: #FFFFFF;
+        margin-right: 10px;
+        padding: 2px 8px;
+        float: left;
+        line-height: 1.7;
+    }
+
+    .posts #cooking_recipe ul li:before {
+        counter-increment: number;
+        content: counter(number);
+        background:#630;
+        display: inline;
+        text-align: center;
+        border-radius: 50%;
+        color: #FFFFFF;
+        margin-right: 10px;
+        padding: 2px 16px;
+        float: left;
+        line-height: 3;
+    }
+
+
+    /* みんなの投稿 */
+    .posts #contribtion_list {
+        margin: 20px;
+    }
+    .posts #contribtion {
+        border-bottom: 1px dotted #E6E6E6;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        width: auto;
+        overflow: hidden;
+    }
+    .posts #contribtion p.comment {
+        margin-left: 50px;
+    }
+    .posts #contribtion p.guide_link {
+        float: right;
+    }
+    .posts p.contribution_user_img {
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin-top: 0px;
+        margin-right: 10px;
+    }
+    .posts p.contribution_user_img img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        object-fit: cover;
+        float: left;
+    }
+    .posts #contribtion_area {
+        margin: 20px;
+    }
+    .posts #contribtion_area p.contribution_btn input {
+        background: #666;
+        border: none;
+        width: 120px;
+        overflow: hidden;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        color: #FFFFFF;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+    }
+    .posts #contribtion_area textarea {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid #CCCCCC;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    p.contribution_btn {
+        width: 200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    p.contribution_btn a {
+        display: block;
+        padding: 10px 20px 10px 20px;
+        background: #630;
+        color: #FFFFFF;
+    }
+
+    /* site_contents */
+
+    .posts #side_contents #contributor {
+        overflow: hidden;
+    }
+    .posts #side_contents #contributor #contributor_info {
+        overflow: hidden;
+        padding: 20px;
+        margin: 20px;   
+        border: 1px solid #CCCCCC;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */ 
+   }
+    .posts #side_contents #contributor p#user_img {
+        width: 80px;
+        height: 80px;
+        float: left;
+        margin-top: 0px;
+        margin-right: 20px;
+    }
+    .posts #side_contents #contributor p#user_name {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .posts #side_contents #contributor p#user_name a {
+        font-size: 14px;
+    }
+    .posts #side_contents #contributor_sub_menu ul {
+        float: left;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .posts #side_contents #contributor_sub_menu ul li {
+        float: left;
+        display: inline;
+        margin-right: 10px;
+    }
+    .posts #side_contents #contributor_sub_menu ul li a {
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background: #666666;
+        color: #FFFFFF;
+        border-radius: 3px;		/* CSS3草案 */
+        -webkit-border-radius: 3px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 3px;	/* Firefox用 */
+    }
+    .posts #side_contents p#user_img img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50px;
+        object-fit: cover;
+        float: left;
+    }
+    .posts #side_contents #contributor #contributor_info #follow {
+        clear: both;
+    }
+    .posts #side_contents #contributor #contributor_info #follow p#follow_btn a {
+        background: #630;
+        width: 100%;
+        display: block;
+        text-align: center;
+        color: #FFFFFF;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+    
+
+   /* おすすめレシピ ================================ */
+
+   .posts p.sub_title {
+       background: #F7EEE7;
+       color: #630;
+       font-weight: bold;
+       text-align: center;
+       padding-top: 10px;
+       padding-bottom: 10px;
+    }
+   .posts #side_contents #recommend_recipe {
+        overflow: hidden;
+    }
+    .posts #side_contents #recommend_recipe ul {
+        margin: 20px;
+        overflow: hidden;
+    }
+    .posts #side_contents #recommend_recipe ul li {
+        width: 48%;
+        overflow: hidden;
+        float: left;
+        display: inline;
+        margin-right: 4%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .posts .reccommend_recipe_img {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 5px;
+    }
+    .posts .reccommend_recipe_name {}
+    .posts #side_contents #recommend_recipe ul li#reccommend_2,
+    .posts #side_contents #recommend_recipe ul li#reccommend_4 {
+        margin-right: 0px;
+    }
+    .posts #side_contents #recommend_recipe ul li#reccommend_3,
+    .posts #side_contents #recommend_recipe ul li#reccommend_4 {
+        margin-bottom: 0px;
+    } 
+    .posts #side_contents #recommend_recipe ul li img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    /* お知らせ */
+    #notice_list {}
+    #notice_list ul {
+        margin: 20px;
+    }
+    #notice_list ul li {
+        border-bottom: 1px dotted #E6E6E6;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+}

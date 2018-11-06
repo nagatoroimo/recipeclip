@@ -1,0 +1,28 @@
+@media screen and (max-width:480px) {
+    .cooktimes #wrapper {
+        background: #FFFFFF;
+        overflow: hidden;
+    }
+    .cooktimes #main_contents_edit {
+        margin: 20px; 
+    }
+    .cooktimes #main_contents_edit input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    #submit_button {
+        width: 140px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    #submit_button input {
+        background: #CC6600;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 5px;		/* CSS3草案 */
+        -webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+        -moz-border-radius: 5px;	/* Firefox用 */
+    }
+}

@@ -1,0 +1,93 @@
+<header>
+    <div id="header_logo">
+        <%= link_to("","/") %>
+    </div>
+
+    <div id="search">
+        <%= form_tag("/results", {method:"get"}) do %>
+        <div id="search_category">
+            <p class="search_title"><i class="fas fa-utensils"></i>レシピカテゴリー</p>
+            <select name="category">
+            <option value="">選択してください</option>
+            <option value="1">ごはんもの</option>
+            <option value="2">汁もの</option>
+            <option value="3">麺もの</option>
+            <option value="4">鍋もの</option>
+            <option value="5">おかず</option>
+            <option value="6">おやつ</option>
+            </select>
+        </div>
+        <div id="search_cooking_time">
+            <p class="search_title"><i class="fas fa-clock"></i>調理時間</p>
+            <select name="cooking_time">
+            <option value="">選択してください</option>
+            <option value="1">10分以下</option>
+            <option value="2">20分以下</option>
+            <option value="3">30分以下</option>
+            <option value="4">60分以下</option>
+            <option value="5">60分以上</option>
+            </select>
+        </div>
+
+        <div id="search_window">
+            <p class="search_title">キーワード</p>
+            <input type="text" name="search" placeholder="料理名・材料名で検索">
+        </div>
+        <div id="search_btn"><input type="submit" value="レシピ検索"></div>
+        <% end %>
+    </div>
+
+    <div id="header_menu">
+        <% if @current_user %>
+        <% user_id = session[:user_id] %>
+            <div id="notified">
+                <% if @count >= 1 %>
+                    <div id="bell">
+                        <i class="fas fa-bell faa-ring animated"></i>
+                        <p id="bell_count"><span id="like_count"><%= @count %></span></p>
+                    <%= render "layouts/notified" %>
+                    </div>
+                <% else %>
+                    <div id="bell">
+                        <i class="fas fa-bell faa-ring"></i>
+                    </div>
+                <% end %>
+            </div>
+            <div id="user_menu">
+                <p><%= @current_user.name %><i class="fas fa-caret-down"></i></p>
+                <ul>
+                    <li id="top_here"><%= link_to "プロフィール", user_path(user_id) %></li>
+                    <li><%= link_to "設定", edit_user_path(user_id) %></li>
+                    <li><%= link_to "レシピを投稿する", new_post_path %></li>
+                    <li>
+                    <% if Blog.find_by(user_id: @current_user.id) %>
+                        <% @blog = Blog.find_by(user_id: @current_user.id) %>
+                        <%= link_to("Myブログ", "/blog/#{@current_user.id}/#{@blog.id}") %>
+                    <% else %>
+                        <%= link_to("ブログを登録する","/blog/#{@current_user.id}/new") %>
+                    <% end %>            
+                    </li>
+                    <li><%= link_to("ログアウト","/logout",{method: :post}) %></li>
+
+                    <% @user = User.find_by(id:7) %>
+                    <% if @current_user.id == @user.id %>
+                        <li><%= link_to("調理時間編集","/cooktime/edit") %></li>
+                        <li><%= link_to("カテゴリー編集","") %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% else %>
+            <nav class="menu clearfix">
+                <div class="menu1"></div>
+                <div class="menu2"></div>
+                <div class="menu3"></div>
+            </nav>
+            <ul id="sub_nav">
+                <li id="top_here"><%= link_to("/about") do %><i class="fas fa-question-circle"></i>RecipeClipとは<% end %></li>
+                <li><%= link_to("/signup") do %><i class="fas fa-user"></i>新規登録<% end %></li>
+                <li id="bottom_here"><%= link_to("/login") do %><i class="fas fa-key"></i>ログイン<% end %></li>
+            </ul>
+        <% end %>
+    </div>
+    </div>
+</header>

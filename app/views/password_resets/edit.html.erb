@@ -1,0 +1,31 @@
+<div id="wrapper">
+    <div id="catch">
+        <h1>パスワードの再設定画面です。</h1>
+        <p id="description">パスワードを入力してください。</p>
+    </div>
+
+    <div id="message">
+      <% if @message %>
+          <%= @message %>
+      <% end %>
+    </div>
+
+    <div id="main_contents_password_reset">
+      <%= form_tag(password_reset_path, method:"patch") do %>
+        <div id="password_reset_form">
+
+        <input name="email" type="hidden" value="<%= @user.email %>">
+
+          <div class="input_password">
+            <p>再設定パスワード</p>
+            <input name="password" type="password">
+          </div>
+
+          <div id="password_reset_input_submit">
+            <input type="submit" value="パスワードを再設定する">
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

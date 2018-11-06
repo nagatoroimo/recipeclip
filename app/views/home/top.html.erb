@@ -1,0 +1,146 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+    
+    <div id="catch">
+        <h1><%= image_tag("/assets/logo-bd2695f16ce35bb3b08503b473c0ecc8b952d42c45618147733e7a0e44360459.png") %></h1>
+        <p id="description">おいしい料理は記録しておきたい。<br>わたしのお気に入り料理レシピをクリップしよう。</p>
+    </div>
+
+    <div id="topix">
+        <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+            <% @post_pr.each do |post| %>
+                <div class="carousel-cell">
+                    <div class="recipe_img">
+                    <%= link_to post_path(post) do %>
+                        <img src="/recipe_images/<%= post.recipe_image_name %>" alt="<%= post.recipe_title %>">
+                    <% end %>
+                    </div>
+                    <div class="recipe_details">
+                        <p class="recipe_title"><%= link_to post.recipe_title, post_path(post) %></p>
+                        <p><%= post.recipe_description %></p>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div id="home_contents">
+        <div id="home_contents_body">
+            <div id="main_contents">
+                <div id="popular_recipe">
+                    <p class="title"><i class="fas fa-heart"></i>人気レシピ</p>
+                    <ul>
+                    <% @recipe_ranking.each_with_index do |(post_id,like_count),num| %>
+                        <% @post = Post.find_by(id: post_id) %>
+                        <% @contribution_count = Contribution.where(post_id: post_id).group(:post_id).count(:post_id) %>
+                        <li id="popular_recipe_<%= num + 1 %>">
+                            <% if @post.present? %>
+                                <div class="recipe_thumbnail">
+                                    <%= link_to image_tag("/recipe_images/#{@post.recipe_image_name}"), "/posts/#{@post.id}" %>
+                                </div>
+                                <div class="recipe_details">
+                                    <p class="recipe_title"><%= link_to @post.recipe_title, "/posts/#{@post.id}" %></p>
+                                    <ul class="popular_recipe_icon">
+                                        <li><i class="fas fa-heart"><%= like_count %></i></li>
+                                        <li class="here"><i class="fas fa-comment">
+                                        <% if @contribution_count.values.present? %>
+                                            <%= @contribution_count.values.join %>
+                                        <% else %>
+                                            0
+                                        <% end %>
+                                        </i></li>
+                                    </ul>
+                                </div>
+                            <% end %>
+                        </li>
+                    <% end %>
+                </div>
+
+                <div id="new_recipe">
+                    <p class="title"><i class="fas fa-star"></i>新着レシピ</p>
+                    <ul>
+                        <% @posts.limit(6).each_with_index do |post, num| %>
+                            <li id="new_recipe_<%= num + 1 %>">
+                                <div class="recipe_thumbnail">
+                                    <%= link_to image_tag("/recipe_images/#{post.recipe_image_name}"), "/posts/#{post.id}" %>
+                                </div>
+                                <div class="recipe_name">
+                                    <%= link_to post.recipe_title, "/posts/#{post.id}" %>
+                                </div>
+                            </li>
+                        <% end %>
+                    </ul>
+                </div>
+
+                <div id="category">
+                    <p class="title"><i class="fas fa-th-list"></i>レシピカテゴリー</p>
+                    <ul>
+                        <% @categories.each_with_index do |category, num| %>
+                            <li id="category_<%= num + 1 %>"><p class="category_title"><%= link_to category_path(category.id) do %><i class="fas fa-tag"></i><%= category.name %><% end %></p></li>
+                        <% end %>
+                    </ul>
+                </div>
+
+                <div id="notice">
+                    <div id="notice_topic">
+                        <p class="title"><i class="fas fa-flag"></i>トピックス</p>
+                        <dl>
+                            <% @notice.each do |notice| %>
+                                <dt><span class="time"><%= notice.created_at.strftime("%Y.%m.%d") %></dt>
+                                <dd><%= link_to notice.title, notice_path(notice) %></dd>
+                            <% end %>
+                        </dl>
+                    </div>
+                </div>
+
+                <div id="bottom_sponsor">
+                    <ul>
+                        <li></li>
+                        <li id="here"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="side_contents">
+                <div id="sponsor">
+                </div>
+
+                <div id="blog_ranking">
+                    <p class="sub_title">レシピブログ ウィークリーランキング</p>
+                    <ul>
+                        <% @week_vote_ranking.each_with_index do |(blog,rank),num| %>
+                            <% @blog = Blog.find_by(id: blog.blog_id)%>
+                            <% @user = User.find_by(id: @blog.user_id) %>
+                            <li>
+                                <p class="blog_title"><i class="fas fa-crown" id="crown_num_<%= num + 1 %>"><%= num + 1 %>位</i><%= link_to @blog.blog_title, @blog.blog_url, :target => "blank" %></p>
+                            </li>
+                        <% end %>
+                    </ul>
+                </div>
+
+                <div id="article_new">
+                    <p class="sub_title">レシピブログ新着記事</p>
+                    <ul>
+                        <% @article.entries.each_with_index do |article, num| %>
+                            <li id="article_<%= num + 1 %>">
+                                <div class="article_thumbnail">
+                                    <% if article.thumbnail.present? %>
+                                        <% if article.thumbnail.include?("assets") %>
+                                            <%= link_to image_tag("/recipe_images/default_recipe_image.jpg"), "/blog/#{article.blog.id}/article/#{article.id}/out", target: "_blank" %>
+                                        <% else %>
+                                            <%= link_to article.thumbnail.html_safe, "/blog/#{article.blog.id}/article/#{article.id}/out", target: "_blank" %>
+                                        <% end %>
+                                    <% else %>
+                                        <%= link_to image_tag("/recipe_images/default_recipe_image.jpg"), "/blog/#{article.blog.id}/article/#{article.id}/out", target: "_blank" %>
+                                    <% end %>
+                                </div>
+                                <p class="article_title"><%= link_to article.title, "/blog/#{article.blog.id}/article/#{article.id}/out" %></p>
+                                <p class="beginning"><% if article.content.present? %><%= ApplicationController.helpers.strip_tags(article.content.truncate(25).html_safe) %><% end %></p>
+                            </li>
+                        <% end %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

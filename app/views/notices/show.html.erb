@@ -1,0 +1,26 @@
+<div id="wrapper">
+    <%= render "layouts/flash" %>
+    
+    <div id="page_body">
+        <div id="main_contents_show">
+            <div id="notice_content">
+                <p class="title"><i class="fas fa-exclamation-circle"><%= @notice.title %></i></p>
+                <%= @notice.content.html_safe %>
+            </div>
+        </div>
+
+        <% if session[:user_id] == 7 %>
+            <div id="side_contents">
+                <ul>
+                    <li><%= link_to "お知らせを編集する", edit_notice_path %></li>
+                    <li id="here"><%= link_to "お知らせを削除する", notice_path, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></li>
+                </ul>
+            </div>
+        <% else %>
+            <div id="side_contents_common">
+                <div id="sponsor">
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>

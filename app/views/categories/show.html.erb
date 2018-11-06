@@ -1,0 +1,26 @@
+<div id="wrapper">
+    <div id="page_body">
+        <div id="main_contents_category">
+            <div id="category_recipe_list">
+                <p class="title"><%= @category.name %>レシピ</p>
+                <ul>
+                    <% @subject.each_with_index do |post, num| %>
+                        <li id="recipe_<%= num + 1 %>">
+                            <div class="recipe_img">
+                                <%= link_to image_tag("/recipe_images/#{post.recipe_image_name}"),"/posts/#{post.id}" %>
+                            </div>
+                            <div class="recipe_title">
+                                <%= link_to(post.recipe_title,"/posts/#{post.id}") %>
+                            </div>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+
+            <div id="side_contents">
+                <div id="sponsor">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
